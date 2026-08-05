@@ -1,0 +1,2208 @@
+/* =====================================================
+   MEMORIES PAGE - COMPLETE ADVANCED CSS
+   DARK BLUE + PURPLE + CYAN + GOLD THEME
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN BACKGROUND
+===================================================== */
+
+.memories-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding: 90px 8%;
+
+    color: white;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+
+    radial-gradient(
+        circle at 10% 10%,
+        rgba(0, 210, 255, 0.22),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 90% 15%,
+        rgba(130, 70, 255, 0.30),
+        transparent 32%
+    ),
+
+    radial-gradient(
+        circle at 50% 90%,
+        rgba(255, 190, 70, 0.15),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #061326,
+        #101c45,
+        #25124a,
+        #071b32
+    );
+
+}
+
+
+/* =====================================================
+   ANIMATED BACKGROUND SHAPES
+===================================================== */
+
+.memories-background-shape {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(20px);
+
+    opacity: 0.40;
+
+    animation:
+    floatingShape
+    10s
+    ease-in-out
+    infinite;
+
+}
+
+
+.shape-one {
+
+    width: 350px;
+
+    height: 350px;
+
+    top: -100px;
+
+    left: -130px;
+
+    background:
+    #00c6ff;
+
+}
+
+
+.shape-two {
+
+    width: 450px;
+
+    height: 450px;
+
+    top: 35%;
+
+    right: -220px;
+
+    background:
+    #7448ff;
+
+    animation-delay:
+    2s;
+
+}
+
+
+.shape-three {
+
+    width: 380px;
+
+    height: 380px;
+
+    bottom: -150px;
+
+    left: 25%;
+
+    background:
+    #ffb703;
+
+    animation-delay:
+    4s;
+
+}
+
+
+@keyframes floatingShape {
+
+    0%,
+    100% {
+
+        transform:
+
+        translate(
+            0,
+            0
+        )
+
+        scale(1);
+
+    }
+
+
+    50% {
+
+        transform:
+
+        translate(
+            45px,
+            -50px
+        )
+
+        scale(1.18);
+
+    }
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.memories-heading {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 950px;
+
+    margin:
+
+    0 auto
+
+    90px;
+
+    text-align:
+    center;
+
+}
+
+
+.memories-tag {
+
+    display:
+    inline-block;
+
+    padding:
+
+    12px
+    25px;
+
+    margin-bottom:
+    25px;
+
+    border:
+
+    1px solid
+
+    rgba(
+        120,
+        220,
+        255,
+        0.35
+    );
+
+    border-radius:
+    50px;
+
+    color:
+    #9be7ff;
+
+    background:
+
+    rgba(
+        0,
+        180,
+        255,
+        0.12
+    );
+
+    backdrop-filter:
+
+    blur(
+        15px
+    );
+
+    font-size:
+    12px;
+
+    font-weight:
+    bold;
+
+    letter-spacing:
+    3px;
+
+}
+
+
+.memories-heading h1 {
+
+    font-size:
+
+    clamp(
+        48px,
+        8vw,
+        90px
+    );
+
+    line-height:
+    1.05;
+
+    color:
+    white;
+
+    text-shadow:
+
+    0 10px 35px
+
+    rgba(
+        0,
+        0,
+        0,
+        0.45
+    );
+
+}
+
+
+.memories-heading h1 span {
+
+    display:
+    block;
+
+    margin-top:
+    8px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #00d9ff,
+
+        #a78bfa,
+
+        #ffd166
+
+    );
+
+    background-clip:
+    text;
+
+    -webkit-background-clip:
+    text;
+
+    -webkit-text-fill-color:
+    transparent;
+
+}
+
+
+/* =====================================================
+   HEART LINE
+===================================================== */
+
+.heading-heart {
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    gap:
+    15px;
+
+    margin:
+
+    25px 0;
+
+    font-size:
+    25px;
+
+}
+
+
+.heading-heart span {
+
+    width:
+    100px;
+
+    height:
+    2px;
+
+    background:
+
+    linear-gradient(
+
+        to right,
+
+        transparent,
+
+        #00d9ff
+
+    );
+
+}
+
+
+.heading-heart span:last-child {
+
+    transform:
+
+    rotate(
+        180deg
+    );
+
+}
+
+
+.memories-heading p {
+
+    max-width:
+    750px;
+
+    margin:
+    auto;
+
+    color:
+    #dcecff;
+
+    font-size:
+    18px;
+
+    line-height:
+    1.9;
+
+}
+
+
+/* =====================================================
+   MEMORY GRID
+===================================================== */
+
+.memories-grid {
+
+    position:
+    relative;
+
+    z-index:
+    5;
+
+    display:
+    grid;
+
+    grid-template-columns:
+
+    repeat(
+        2,
+        1fr
+    );
+
+    gap:
+    35px;
+
+    max-width:
+    1250px;
+
+    margin:
+    auto;
+
+}
+
+
+/* =====================================================
+   MEMORY CARD
+===================================================== */
+
+.memory-card {
+
+    position:
+    relative;
+
+    overflow:
+    hidden;
+
+    padding:
+    38px;
+
+    border:
+
+    1px solid
+
+    rgba(
+        160,
+        210,
+        255,
+        0.20
+    );
+
+    border-radius:
+    32px;
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        rgba(
+            20,
+            40,
+            85,
+            0.90
+        ),
+
+        rgba(
+            40,
+            20,
+            80,
+            0.80
+        )
+
+    );
+
+    backdrop-filter:
+
+    blur(
+        20px
+    );
+
+    box-shadow:
+
+    0 25px 60px
+
+    rgba(
+        0,
+        0,
+        0,
+        0.35
+    );
+
+    transition:
+
+    transform
+    0.45s,
+
+    box-shadow
+    0.45s,
+
+    border
+    0.45s;
+
+}
+
+
+.memory-card::before {
+
+    content:
+    "";
+
+    position:
+    absolute;
+
+    width:
+    230px;
+
+    height:
+    230px;
+
+    top:
+    -120px;
+
+    right:
+    -100px;
+
+    border-radius:
+    50%;
+
+    background:
+
+    rgba(
+        0,
+        220,
+        255,
+        0.10
+    );
+
+}
+
+
+.memory-card::after {
+
+    content:
+    "";
+
+    position:
+    absolute;
+
+    width:
+    170px;
+
+    height:
+    170px;
+
+    bottom:
+    -100px;
+
+    left:
+    -90px;
+
+    border-radius:
+    50%;
+
+    background:
+
+    rgba(
+        167,
+        139,
+        250,
+        0.13
+    );
+
+}
+
+
+.memory-card:hover {
+
+    transform:
+
+    translateY(
+        -13px
+    );
+
+    border-color:
+
+    rgba(
+        0,
+        220,
+        255,
+        0.60
+    );
+
+    box-shadow:
+
+    0 35px 80px
+
+    rgba(
+        0,
+        0,
+        0,
+        0.55
+    );
+
+}
+
+
+/* =====================================================
+   CARD NUMBER
+===================================================== */
+
+.memory-number {
+
+    position:
+    absolute;
+
+    top:
+    20px;
+
+    right:
+    25px;
+
+    color:
+
+    rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    font-size:
+    58px;
+
+    font-weight:
+    bold;
+
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.memory-icon {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    width:
+    85px;
+
+    height:
+    85px;
+
+    margin-bottom:
+    25px;
+
+    border-radius:
+    27px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #00c6ff,
+
+        #7654ff
+
+    );
+
+    box-shadow:
+
+    0 15px 35px
+
+    rgba(
+        0,
+        180,
+        255,
+        0.30
+    );
+
+    font-size:
+    40px;
+
+    transition:
+    0.4s;
+
+}
+
+
+.memory-card:hover
+.memory-icon {
+
+    transform:
+
+    rotate(
+        8deg
+    )
+
+    scale(
+        1.08
+    );
+
+}
+
+
+/* =====================================================
+   CARD SMALL TITLE
+===================================================== */
+
+.memory-small-title {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    color:
+    #72e7ff;
+
+    font-size:
+    12px;
+
+    font-weight:
+    bold;
+
+    letter-spacing:
+    3px;
+
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.memory-card h2 {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    margin:
+
+    12px 0
+
+    15px;
+
+    color:
+    white;
+
+    font-size:
+    34px;
+
+    line-height:
+    1.25;
+
+}
+
+
+/* =====================================================
+   HEART DIVIDER
+===================================================== */
+
+.memory-line {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    gap:
+    12px;
+
+    margin-bottom:
+    20px;
+
+    color:
+    #ffd166;
+
+}
+
+
+.memory-line span {
+
+    width:
+    55px;
+
+    height:
+    3px;
+
+    border-radius:
+    20px;
+
+    background:
+
+    linear-gradient(
+
+        to right,
+
+        #00d9ff,
+
+        #a78bfa
+
+    );
+
+}
+
+
+.memory-line span:last-child {
+
+    opacity:
+    0.45;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.memory-description {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    color:
+    #dce8fa;
+
+    font-size:
+    15px;
+
+    line-height:
+    1.95;
+
+}
+
+
+/* =====================================================
+   SHAYARI BOX
+===================================================== */
+
+.memory-shayari {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    margin-top:
+    25px;
+
+    padding:
+    22px;
+
+    border:
+
+    1px solid
+
+    rgba(
+        0,
+        220,
+        255,
+        0.20
+    );
+
+    border-radius:
+    22px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(
+            0,
+            180,
+            255,
+            0.14
+        ),
+
+        rgba(
+            130,
+            80,
+            255,
+            0.17
+        )
+
+    );
+
+    text-align:
+    center;
+
+}
+
+
+.memory-shayari span {
+
+    display:
+    block;
+
+    margin-bottom:
+    8px;
+
+    font-size:
+    25px;
+
+}
+
+
+.memory-shayari p {
+
+    color:
+    #e7f8ff;
+
+    font-size:
+    16px;
+
+    font-weight:
+    600;
+
+    font-style:
+    italic;
+
+    line-height:
+    1.9;
+
+}
+
+
+/* =====================================================
+   STRONG RELATIONSHIP BOX
+===================================================== */
+
+.memory-special {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    margin-top:
+    18px;
+
+    padding:
+    20px;
+
+    border-left:
+
+    4px solid
+
+    #ffd166;
+
+    border-radius:
+
+    0
+    20px
+    20px
+    0;
+
+    background:
+
+    rgba(
+        255,
+        209,
+        102,
+        0.08
+    );
+
+}
+
+
+.memory-special b {
+
+    display:
+    block;
+
+    margin-bottom:
+    9px;
+
+    color:
+    #ffd166;
+
+    font-size:
+    14px;
+
+    letter-spacing:
+    1px;
+
+}
+
+
+.memory-special p {
+
+    color:
+    #e8efff;
+
+    font-size:
+    14px;
+
+    line-height:
+    1.85;
+
+}
+
+
+/* =====================================================
+   CARD FOOTER
+===================================================== */
+
+.memory-footer {
+
+    position:
+    relative;
+
+    z-index:
+    2;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    space-between;
+
+    gap:
+    15px;
+
+    margin-top:
+    25px;
+
+    padding-top:
+    20px;
+
+    border-top:
+
+    1px solid
+
+    rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+}
+
+
+.memory-footer span {
+
+    color:
+    #aebbd3;
+
+    font-size:
+    12px;
+
+}
+
+
+.memory-footer b {
+
+    font-size:
+    22px;
+
+}
+
+
+/* =====================================================
+   DECORATIVE HEART
+===================================================== */
+
+.memory-heart {
+
+    position:
+    absolute;
+
+    right:
+    20px;
+
+    bottom:
+    18px;
+
+    z-index:
+    1;
+
+    color:
+
+    rgba(
+        0,
+        220,
+        255,
+        0.13
+    );
+
+    font-size:
+    80px;
+
+    transform:
+
+    rotate(
+        -15deg
+    );
+
+}
+
+
+/* =====================================================
+   SPECIAL LOVE MESSAGE
+===================================================== */
+
+.special-memory-message {
+
+    position:
+    relative;
+
+    z-index:
+    5;
+
+    max-width:
+    1050px;
+
+    overflow:
+    hidden;
+
+    margin:
+
+    100px auto;
+
+    padding:
+
+    80px 12%;
+
+    border:
+
+    1px solid
+
+    rgba(
+        0,
+        220,
+        255,
+        0.25
+    );
+
+    border-radius:
+    45px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(
+            0,
+            130,
+            200,
+            0.28
+        ),
+
+        rgba(
+            95,
+            50,
+            190,
+            0.35
+        )
+
+    );
+
+    backdrop-filter:
+
+    blur(
+        25px
+    );
+
+    text-align:
+    center;
+
+    box-shadow:
+
+    0 35px 80px
+
+    rgba(
+        0,
+        0,
+        0,
+        0.40
+    );
+
+}
+
+
+.special-message-icon {
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    width:
+    95px;
+
+    height:
+    95px;
+
+    margin:
+
+    auto auto
+
+    25px;
+
+    border-radius:
+    30px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #00c6ff,
+
+        #7955ff
+
+    );
+
+    box-shadow:
+
+    0 15px 40px
+
+    rgba(
+        0,
+        200,
+        255,
+        0.35
+    );
+
+    font-size:
+    45px;
+
+}
+
+
+.message-title {
+
+    color:
+    #8deaff;
+
+    font-size:
+    12px;
+
+    font-weight:
+    bold;
+
+    letter-spacing:
+    3px;
+
+}
+
+
+.special-memory-message h2 {
+
+    margin:
+
+    20px 0;
+
+    color:
+    white;
+
+    font-size:
+
+    clamp(
+        35px,
+        5vw,
+        58px
+    );
+
+    line-height:
+    1.25;
+
+}
+
+
+.special-memory-message h2 strong {
+
+    display:
+    block;
+
+    color:
+    #ffd166;
+
+}
+
+
+.special-memory-message > p {
+
+    max-width:
+    750px;
+
+    margin:
+    auto;
+
+    color:
+    #e4efff;
+
+    font-size:
+    17px;
+
+    line-height:
+    2;
+
+}
+
+
+.message-sign {
+
+    display:
+    flex;
+
+    flex-direction:
+    column;
+
+    gap:
+    9px;
+
+    margin-top:
+    35px;
+
+}
+
+
+.message-sign small {
+
+    color:
+    #aebbd5;
+
+    font-size:
+    14px;
+
+    font-style:
+    italic;
+
+}
+
+
+.message-sign b {
+
+    color:
+    #ffd166;
+
+    font-size:
+    21px;
+
+}
+
+
+/* =====================================================
+   FUTURE SECTION
+===================================================== */
+
+.future-memory {
+
+    position:
+    relative;
+
+    z-index:
+    5;
+
+    display:
+    grid;
+
+    grid-template-columns:
+
+    0.7fr
+    1.3fr;
+
+    align-items:
+    center;
+
+    gap:
+    70px;
+
+    max-width:
+    1150px;
+
+    margin:
+
+    80px auto
+
+    110px;
+
+    padding:
+    45px;
+
+}
+
+
+.future-icon {
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    width:
+    260px;
+
+    height:
+    260px;
+
+    margin:
+    auto;
+
+    border:
+
+    2px solid
+
+    rgba(
+        0,
+        220,
+        255,
+        0.30
+    );
+
+    border-radius:
+    50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(
+            0,
+            190,
+            255,
+            0.30
+        ),
+
+        rgba(
+            100,
+            60,
+            255,
+            0.14
+        ),
+
+        transparent
+    );
+
+    box-shadow:
+
+    0 0 80px
+
+    rgba(
+        0,
+        200,
+        255,
+        0.25
+    );
+
+    font-size:
+    110px;
+
+    animation:
+
+    futurePulse
+
+    3s
+
+    ease-in-out
+
+    infinite;
+
+}
+
+
+@keyframes futurePulse {
+
+    0%,
+    100% {
+
+        transform:
+
+        scale(
+            1
+        );
+
+    }
+
+
+    50% {
+
+        transform:
+
+        scale(
+            1.08
+        );
+
+    }
+
+}
+
+
+.future-content > span {
+
+    color:
+    #72e7ff;
+
+    font-size:
+    12px;
+
+    font-weight:
+    bold;
+
+    letter-spacing:
+    3px;
+
+}
+
+
+.future-content h2 {
+
+    margin:
+
+    18px 0;
+
+    color:
+    white;
+
+    font-size:
+
+    clamp(
+        35px,
+        5vw,
+        55px
+    );
+
+    line-height:
+    1.2;
+
+}
+
+
+.future-content h2 strong {
+
+    display:
+    block;
+
+    color:
+    #ffd166;
+
+}
+
+
+.future-content > p {
+
+    color:
+    #dce9fb;
+
+    font-size:
+    16px;
+
+    line-height:
+    1.95;
+
+}
+
+
+.future-points {
+
+    display:
+    flex;
+
+    flex-direction:
+    column;
+
+    gap:
+    15px;
+
+    margin-top:
+    30px;
+
+}
+
+
+.future-points div {
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    gap:
+    15px;
+
+    padding:
+    16px;
+
+    border:
+
+    1px solid
+
+    rgba(
+        255,
+        255,
+        255,
+        0.12
+    );
+
+    border-radius:
+    18px;
+
+    background:
+
+    rgba(
+        255,
+        255,
+        255,
+        0.06
+    );
+
+    transition:
+    0.3s;
+
+}
+
+
+.future-points div:hover {
+
+    transform:
+
+    translateX(
+        10px
+    );
+
+    background:
+
+    rgba(
+        0,
+        200,
+        255,
+        0.12
+    );
+
+}
+
+
+.future-points b {
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    min-width:
+    48px;
+
+    height:
+    48px;
+
+    border-radius:
+    15px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #00bfff,
+
+        #7955ff
+
+    );
+
+}
+
+
+.future-points span {
+
+    color:
+    #edf5ff;
+
+    font-size:
+    15px;
+
+}
+
+
+/* =====================================================
+   FINAL FOOTER
+===================================================== */
+
+.memories-footer {
+
+    position:
+    relative;
+
+    z-index:
+    5;
+
+    max-width:
+    850px;
+
+    margin:
+    auto;
+
+    padding:
+
+    70px 25px;
+
+    text-align:
+    center;
+
+}
+
+
+.footer-hearts {
+
+    color:
+    #ffd166;
+
+    font-size:
+    30px;
+
+}
+
+
+.memories-footer h2 {
+
+    margin:
+
+    22px 0;
+
+    color:
+    white;
+
+    font-size:
+
+    clamp(
+        35px,
+        5vw,
+        55px
+    );
+
+}
+
+
+.memories-footer p {
+
+    max-width:
+    650px;
+
+    margin:
+    auto;
+
+    color:
+    #dce9fa;
+
+    font-size:
+    17px;
+
+    line-height:
+    1.95;
+
+}
+
+
+.memories-footer > span {
+
+    display:
+    inline-block;
+
+    margin-top:
+    35px;
+
+    padding:
+
+    15px 28px;
+
+    border:
+
+    1px solid
+
+    rgba(
+        255,
+        209,
+        102,
+        0.30
+    );
+
+    border-radius:
+    50px;
+
+    color:
+    #ffd166;
+
+    background:
+
+    rgba(
+        255,
+        209,
+        102,
+        0.08
+    );
+
+    font-weight:
+    bold;
+
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (
+max-width: 950px
+) {
+
+    .memories-section {
+
+        padding:
+
+        75px 6%;
+
+    }
+
+
+    .memories-grid {
+
+        grid-template-columns:
+
+        1fr;
+
+    }
+
+
+    .future-memory {
+
+        grid-template-columns:
+
+        1fr;
+
+        text-align:
+        center;
+
+    }
+
+
+    .future-icon {
+
+        width:
+        220px;
+
+        height:
+        220px;
+
+    }
+
+
+    .future-points {
+
+        max-width:
+        600px;
+
+        margin:
+
+        30px auto
+
+        0;
+
+        text-align:
+        left;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (
+max-width: 600px
+) {
+
+    .memories-section {
+
+        padding:
+
+        60px 5%;
+
+    }
+
+
+    .memories-heading {
+
+        margin-bottom:
+
+        60px;
+
+    }
+
+
+    .memories-tag {
+
+        padding:
+
+        10px 15px;
+
+        font-size:
+        9px;
+
+        letter-spacing:
+        1px;
+
+    }
+
+
+    .memories-heading p {
+
+        font-size:
+        15px;
+
+    }
+
+
+    .heading-heart span {
+
+        width:
+        55px;
+
+    }
+
+
+    .memories-grid {
+
+        gap:
+        25px;
+
+    }
+
+
+    .memory-card {
+
+        padding:
+
+        28px 20px;
+
+        border-radius:
+        25px;
+
+    }
+
+
+    .memory-number {
+
+        font-size:
+        45px;
+
+    }
+
+
+    .memory-icon {
+
+        width:
+        70px;
+
+        height:
+        70px;
+
+        border-radius:
+        22px;
+
+        font-size:
+        33px;
+
+    }
+
+
+    .memory-card h2 {
+
+        font-size:
+        28px;
+
+    }
+
+
+    .memory-description {
+
+        font-size:
+        14px;
+
+        line-height:
+        1.85;
+
+    }
+
+
+    .memory-shayari {
+
+        padding:
+        17px;
+
+    }
+
+
+    .memory-shayari p {
+
+        font-size:
+        14px;
+
+    }
+
+
+    .memory-special {
+
+        padding:
+        16px;
+
+    }
+
+
+    .memory-special p {
+
+        font-size:
+        13px;
+
+    }
+
+
+    .memory-footer span {
+
+        font-size:
+        10px;
+
+    }
+
+
+    .special-memory-message {
+
+        margin:
+
+        70px auto;
+
+        padding:
+
+        60px 20px;
+
+        border-radius:
+        30px;
+
+    }
+
+
+    .special-message-icon {
+
+        width:
+        75px;
+
+        height:
+        75px;
+
+        border-radius:
+        23px;
+
+        font-size:
+        35px;
+
+    }
+
+
+    .special-memory-message > p {
+
+        font-size:
+        15px;
+
+    }
+
+
+    .future-memory {
+
+        padding:
+
+        20px 0;
+
+        gap:
+        35px;
+
+    }
+
+
+    .future-icon {
+
+        width:
+        170px;
+
+        height:
+        170px;
+
+        font-size:
+        75px;
+
+    }
+
+
+    .future-content > p {
+
+        font-size:
+        14px;
+
+    }
+
+
+    .future-points div {
+
+        padding:
+        13px;
+
+    }
+
+
+    .future-points span {
+
+        font-size:
+        13px;
+
+    }
+
+
+    .memories-footer {
+
+        padding:
+
+        50px 10px;
+
+    }
+
+
+    .memories-footer p {
+
+        font-size:
+        15px;
+
+    }
+
+}

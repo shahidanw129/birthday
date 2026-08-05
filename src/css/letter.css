@@ -1,0 +1,1740 @@
+/* ==================================================
+   BIRTHDAY LETTER PAGE
+   DARK PURPLE + BLUE + GOLD PREMIUM THEME
+================================================== */
+
+
+/* ===============================
+   MAIN PAGE
+================================ */
+
+.letter-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 100px 25px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(105, 67, 255, 0.45),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(0, 190, 255, 0.28),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255, 166, 0, 0.18),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #080b22,
+            #15113b,
+            #211050,
+            #0b193b
+        );
+
+}
+
+
+/* ===============================
+   ANIMATED BACKGROUND
+================================ */
+
+.letter-page-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    opacity: 0.8;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.16) 1px,
+            transparent 1px
+        );
+
+    background-size: 38px 38px;
+
+    animation:
+
+        backgroundMove 18s linear infinite;
+
+}
+
+
+@keyframes backgroundMove {
+
+    0% {
+
+        background-position:
+
+            0 0;
+
+    }
+
+
+    100% {
+
+        background-position:
+
+            180px 180px;
+
+    }
+
+}
+
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+
+.letter-page-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.letter-page-header {
+
+    text-align: center;
+
+    max-width: 850px;
+
+    margin:
+
+        0 auto 65px;
+
+    animation:
+
+        headerEntry 1.2s ease;
+
+}
+
+
+@keyframes headerEntry {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(-45px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+
+/* ===============================
+   TOP TAG
+================================ */
+
+.letter-page-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+
+        12px 26px;
+
+    border:
+
+        1px solid
+        rgba(255, 211, 105, 0.55);
+
+    border-radius:
+
+        50px;
+
+    color:
+
+        #ffe29a;
+
+    background:
+
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+
+        0 0 30px
+        rgba(255, 194, 64, 0.18);
+
+    font-size:
+
+        13px;
+
+    font-weight:
+
+        700;
+
+    letter-spacing:
+
+        3px;
+
+    backdrop-filter:
+
+        blur(14px);
+
+}
+
+
+/* ===============================
+   MAIN TITLE
+================================ */
+
+.letter-page-header h1 {
+
+    margin:
+
+        25px 0 18px;
+
+    font-size:
+
+        clamp(
+            42px,
+            6vw,
+            78px
+        );
+
+    line-height:
+
+        1.15;
+
+    font-weight:
+
+        900;
+
+    letter-spacing:
+
+        -2px;
+
+    color:
+
+        #ffffff;
+
+    text-shadow:
+
+        0 0 25px
+        rgba(151, 119, 255, 0.5);
+
+}
+
+
+.letter-page-header h1::after {
+
+    content:
+
+        "";
+
+    display: block;
+
+    width: 150px;
+
+    height: 5px;
+
+    margin:
+
+        25px auto 0;
+
+    border-radius:
+
+        20px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #8f6cff,
+            #ffd36b,
+            #8f6cff,
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 20px
+        rgba(255, 211, 107, 0.65);
+
+}
+
+
+/* ===============================
+   HEADER DESCRIPTION
+================================ */
+
+.letter-page-header p {
+
+    max-width:
+
+        720px;
+
+    margin:
+
+        28px auto 0;
+
+    color:
+
+        #cfcbe9;
+
+    font-size:
+
+        18px;
+
+    line-height:
+
+        1.9;
+
+}
+
+
+/* ===============================
+   LETTER CARD
+================================ */
+
+.birthday-letter-card {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+
+        70px 75px;
+
+    box-sizing:
+
+        border-box;
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius:
+
+        40px;
+
+    overflow:
+
+        hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(38, 29, 85, 0.94),
+            rgba(14, 25, 62, 0.94)
+        );
+
+    box-shadow:
+
+        0 35px 100px
+        rgba(0, 0, 0, 0.6),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.15);
+
+    backdrop-filter:
+
+        blur(25px);
+
+    animation:
+
+        cardEntry
+        1.3s ease;
+
+}
+
+
+@keyframes cardEntry {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(70px)
+            scale(0.95);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ===============================
+   CARD LIGHT EFFECT
+================================ */
+
+.birthday-letter-card::before {
+
+    content:
+
+        "";
+
+    position:
+
+        absolute;
+
+    width:
+
+        450px;
+
+    height:
+
+        450px;
+
+    top:
+
+        -270px;
+
+    right:
+
+        -180px;
+
+    border-radius:
+
+        50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(119, 87, 255, 0.4),
+
+            transparent 68%
+
+        );
+
+    pointer-events:
+
+        none;
+
+}
+
+
+.birthday-letter-card::after {
+
+    content:
+
+        "";
+
+    position:
+
+        absolute;
+
+    width:
+
+        350px;
+
+    height:
+
+        350px;
+
+    bottom:
+
+        -230px;
+
+    left:
+
+        -160px;
+
+    border-radius:
+
+        50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0, 180, 255, 0.25),
+
+            transparent 68%
+
+        );
+
+    pointer-events:
+
+        none;
+
+}
+
+
+/* ===============================
+   CAKE ICON
+================================ */
+
+.letter-top-icon {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    width:
+
+        105px;
+
+    height:
+
+        105px;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    margin:
+
+        0 auto 25px;
+
+    border-radius:
+
+        50%;
+
+    font-size:
+
+        48px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffd36b,
+            #ff9d42
+        );
+
+    box-shadow:
+
+        0 0 0 12px
+        rgba(255, 198, 72, 0.1),
+
+        0 0 45px
+        rgba(255, 176, 50, 0.5);
+
+    animation:
+
+        cakeFloat
+        3s ease-in-out infinite;
+
+}
+
+
+@keyframes cakeFloat {
+
+    0%,
+
+    100% {
+
+        transform:
+
+            translateY(0)
+            rotate(0);
+
+    }
+
+
+    50% {
+
+        transform:
+
+            translateY(-12px)
+            rotate(4deg);
+
+    }
+
+}
+
+
+/* ===============================
+   DECORATION
+================================ */
+
+.letter-decoration {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    text-align:
+
+        center;
+
+    color:
+
+        #ffd36b;
+
+    font-size:
+
+        22px;
+
+    letter-spacing:
+
+        10px;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+/* ===============================
+   LETTER TITLE
+================================ */
+
+.birthday-letter-card h2 {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    margin:
+
+        0;
+
+    text-align:
+
+        center;
+
+    color:
+
+        #ffffff;
+
+    font-size:
+
+        clamp(
+            32px,
+            4vw,
+            55px
+        );
+
+    line-height:
+
+        1.25;
+
+    text-shadow:
+
+        0 0 25px
+        rgba(153, 112, 255, 0.5);
+
+}
+
+
+/* ===============================
+   GOLD LINE
+================================ */
+
+.letter-line {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    width:
+
+        180px;
+
+    height:
+
+        4px;
+
+    margin:
+
+        32px auto 50px;
+
+    border-radius:
+
+        30px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffd36b,
+            #ffffff,
+            #ffd36b,
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 18px
+        rgba(255, 211, 107, 0.6);
+
+}
+
+
+/* ===============================
+   LETTER CONTENT
+================================ */
+
+.letter-message {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    max-width:
+
+        850px;
+
+    margin:
+
+        auto;
+
+}
+
+
+.letter-message p {
+
+    color:
+
+        #e4e1f4;
+
+    font-size:
+
+        18px;
+
+    line-height:
+
+        2;
+
+    margin:
+
+        0 0 28px;
+
+    text-align:
+
+        left;
+
+}
+
+
+/* ===============================
+   DEAR NAME
+================================ */
+
+.letter-message p:first-child {
+
+    color:
+
+        #ffd36b;
+
+    font-size:
+
+        27px;
+
+    font-weight:
+
+        800;
+
+    margin-bottom:
+
+        25px;
+
+}
+
+
+/* ===============================
+   SPECIAL QUOTE BOX
+================================ */
+
+.letter-special-box {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        25px;
+
+    margin:
+
+        45px 0;
+
+    padding:
+
+        30px;
+
+    border:
+
+        1px solid
+        rgba(133, 102, 255, 0.45);
+
+    border-left:
+
+        7px solid
+        #9a7cff;
+
+    border-radius:
+
+        24px;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            rgba(123, 89, 255, 0.18),
+            rgba(0, 168, 255, 0.1)
+        );
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+.letter-special-box span {
+
+    font-size:
+
+        45px;
+
+}
+
+
+.letter-special-box p {
+
+    margin:
+
+        0;
+
+    color:
+
+        #ffffff;
+
+    font-size:
+
+        20px;
+
+    font-style:
+
+        italic;
+
+}
+
+
+/* ===============================
+   SHAYARI BOX
+================================ */
+
+.shayari-box {
+
+    position:
+
+        relative;
+
+    margin:
+
+        50px 0;
+
+    padding:
+
+        42px;
+
+    overflow:
+
+        hidden;
+
+    text-align:
+
+        center;
+
+    border:
+
+        1px solid
+        rgba(255, 210, 103, 0.35);
+
+    border-radius:
+
+        30px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(91, 54, 170, 0.3),
+            rgba(15, 62, 115, 0.3)
+        );
+
+    box-shadow:
+
+        0 20px 55px
+        rgba(0, 0, 0, 0.3);
+
+}
+
+
+.shayari-box::before {
+
+    content:
+
+        "❝";
+
+    position:
+
+        absolute;
+
+    top:
+
+        -35px;
+
+    left:
+
+        20px;
+
+    color:
+
+        rgba(255, 211, 107, 0.12);
+
+    font-size:
+
+        180px;
+
+}
+
+
+.shayari-box h3 {
+
+    position:
+
+        relative;
+
+    color:
+
+        #ffd36b;
+
+    font-size:
+
+        28px;
+
+    margin:
+
+        0 0 25px;
+
+}
+
+
+.shayari-box p {
+
+    position:
+
+        relative;
+
+    margin:
+
+        0;
+
+    color:
+
+        #ffffff;
+
+    font-size:
+
+        20px;
+
+    line-height:
+
+        2.1;
+
+    text-align:
+
+        center;
+
+    font-style:
+
+        italic;
+
+}
+
+
+/* ===============================
+   FINAL BIRTHDAY WISH
+================================ */
+
+.final-birthday-wish {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    display:
+
+        flex;
+
+    flex-direction:
+
+        column;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    gap:
+
+        15px;
+
+    margin:
+
+        55px 0 30px;
+
+    padding:
+
+        38px 25px;
+
+    text-align:
+
+        center;
+
+    border:
+
+        1px solid
+        rgba(255, 210, 105, 0.55);
+
+    border-radius:
+
+        30px;
+
+    color:
+
+        #ffffff;
+
+    font-size:
+
+        32px;
+
+    font-weight:
+
+        900;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 157, 66, 0.22),
+            rgba(130, 88, 255, 0.25)
+        );
+
+    box-shadow:
+
+        0 0 55px
+        rgba(255, 174, 56, 0.2);
+
+}
+
+
+.final-birthday-wish span {
+
+    color:
+
+        #ffd36b;
+
+    font-size:
+
+        16px;
+
+    font-weight:
+
+        500;
+
+}
+
+
+/* ===============================
+   SIGNATURE
+================================ */
+
+.letter-signature {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    text-align:
+
+        right;
+
+    margin-top:
+
+        65px;
+
+    padding-top:
+
+        35px;
+
+    border-top:
+
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+}
+
+
+.letter-signature p {
+
+    color:
+
+        #bcb7d9;
+
+    font-size:
+
+        17px;
+
+    margin:
+
+        0 0 10px;
+
+}
+
+
+.letter-signature h3 {
+
+    color:
+
+        #ffd36b;
+
+    font-size:
+
+        35px;
+
+    margin:
+
+        0 0 8px;
+
+}
+
+
+.letter-signature span {
+
+    color:
+
+        #a9a4c5;
+
+    font-size:
+
+        14px;
+
+}
+
+
+/* ===============================
+   PAGE FOOTER
+================================ */
+
+.letter-page-footer {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        2;
+
+    max-width:
+
+        850px;
+
+    margin:
+
+        75px auto 0;
+
+    text-align:
+
+        center;
+
+    padding:
+
+        45px 25px;
+
+    border-radius:
+
+        35px;
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    background:
+
+        rgba(255, 255, 255, 0.06);
+
+    backdrop-filter:
+
+        blur(15px);
+
+}
+
+
+.letter-page-footer > span {
+
+    display:
+
+        block;
+
+    font-size:
+
+        28px;
+
+    letter-spacing:
+
+        15px;
+
+    margin-bottom:
+
+        18px;
+
+}
+
+
+.letter-page-footer h2 {
+
+    color:
+
+        #ffffff;
+
+    font-size:
+
+        35px;
+
+    margin:
+
+        0 0 15px;
+
+}
+
+
+.letter-page-footer p {
+
+    color:
+
+        #c8c3df;
+
+    font-size:
+
+        17px;
+
+    line-height:
+
+        1.8;
+
+    margin:
+
+        0;
+
+}
+
+
+/* ===============================
+   TABLET RESPONSIVE
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    .letter-page {
+
+        padding:
+
+            75px 20px;
+
+    }
+
+
+    .birthday-letter-card {
+
+        padding:
+
+            55px 40px;
+
+    }
+
+
+    .letter-page-header h1 {
+
+        font-size:
+
+            55px;
+
+    }
+
+
+    .letter-message p {
+
+        font-size:
+
+            17px;
+
+    }
+
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media screen and (max-width: 600px) {
+
+    .letter-page {
+
+        padding:
+
+            55px 13px;
+
+    }
+
+
+    .letter-page-header {
+
+        margin-bottom:
+
+            40px;
+
+    }
+
+
+    .letter-page-tag {
+
+        padding:
+
+            10px 17px;
+
+        font-size:
+
+            10px;
+
+        letter-spacing:
+
+            1.5px;
+
+    }
+
+
+    .letter-page-header h1 {
+
+        font-size:
+
+            39px;
+
+        letter-spacing:
+
+            -1px;
+
+    }
+
+
+    .letter-page-header p {
+
+        font-size:
+
+            15px;
+
+        line-height:
+
+            1.8;
+
+    }
+
+
+    .birthday-letter-card {
+
+        padding:
+
+            42px 20px;
+
+        border-radius:
+
+            25px;
+
+    }
+
+
+    .letter-top-icon {
+
+        width:
+
+            80px;
+
+        height:
+
+            80px;
+
+        font-size:
+
+            37px;
+
+    }
+
+
+    .letter-decoration {
+
+        font-size:
+
+            15px;
+
+        letter-spacing:
+
+            4px;
+
+    }
+
+
+    .birthday-letter-card h2 {
+
+        font-size:
+
+            34px;
+
+    }
+
+
+    .letter-line {
+
+        margin:
+
+            25px auto 35px;
+
+    }
+
+
+    .letter-message p {
+
+        font-size:
+
+            16px;
+
+        line-height:
+
+            1.9;
+
+        text-align:
+
+            left;
+
+    }
+
+
+    .letter-message p:first-child {
+
+        font-size:
+
+            23px;
+
+    }
+
+
+    .letter-special-box {
+
+        flex-direction:
+
+            column;
+
+        text-align:
+
+            center;
+
+        padding:
+
+            25px 18px;
+
+    }
+
+
+    .letter-special-box p {
+
+        text-align:
+
+            center;
+
+        font-size:
+
+            17px;
+
+    }
+
+
+    .shayari-box {
+
+        padding:
+
+            30px 15px;
+
+    }
+
+
+    .shayari-box h3 {
+
+        font-size:
+
+            23px;
+
+    }
+
+
+    .shayari-box p {
+
+        font-size:
+
+            16px;
+
+        line-height:
+
+            2;
+
+    }
+
+
+    .final-birthday-wish {
+
+        padding:
+
+            30px 15px;
+
+        font-size:
+
+            24px;
+
+    }
+
+
+    .letter-signature {
+
+        text-align:
+
+            center;
+
+    }
+
+
+    .letter-signature h3 {
+
+        font-size:
+
+            30px;
+
+    }
+
+
+    .letter-page-footer {
+
+        margin-top:
+
+            50px;
+
+        padding:
+
+            35px 17px;
+
+    }
+
+
+    .letter-page-footer h2 {
+
+        font-size:
+
+            27px;
+
+    }
+
+
+    .letter-page-footer p {
+
+        font-size:
+
+            15px;
+
+    }
+
+}
+/* =========================
+   LETTER IMAGE
+========================= */
+
+.letter-image{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:30px 0;
+
+}
+
+.letter-image img{
+
+    width:320px;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:6px solid #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(255,20,147,.35),
+        0 0 30px rgba(255,255,255,.2);
+
+    transition:.5s;
+
+}
+
+.letter-image img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 20px 45px rgba(255,20,147,.5);
+
+}
+
+@media(max-width:768px){
+
+    .letter-image img{
+
+        width:260px;
+
+        height:340px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .letter-image img{
+
+        width:220px;
+
+        height:300px;
+
+    }
+
+}

@@ -1,0 +1,130 @@
+.gift-section{
+
+margin-top:60px;
+text-align:center;
+
+}
+
+.gift-title h1{
+
+font-size:42px;
+color:#ff2d75;
+
+}
+
+.gift-title p{
+
+margin-top:10px;
+color:#666;
+
+}
+
+.gift-container{
+
+display:flex;
+justify-content:center;
+margin-top:40px;
+
+}
+
+.gift-box{
+
+width:260px;
+height:260px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.gift-box:hover{
+
+transform:scale(1.08) rotate(-3deg);
+
+}
+
+.gift-top{
+
+height:60px;
+background:#ff2d75;
+border-radius:15px 15px 0 0;
+
+}
+
+.gift-body{
+
+height:200px;
+background:#ff70aa;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border-radius:0 0 20px 20px;
+color:white;
+
+}
+
+.gift-icon{
+
+font-size:70px;
+margin-bottom:20px;
+
+}
+
+.surprise-card{
+
+width:700px;
+background:white;
+padding:45px;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.cake{
+
+font-size:70px;
+color:#ff2d75;
+
+}
+
+.surprise-card h1{
+
+margin:20px 0;
+color:#ff2d75;
+
+}
+
+.surprise-card p{
+
+line-height:1.9;
+font-size:18px;
+color:#444;
+
+}
+
+.surprise-card h2{
+
+margin:25px 0;
+color:#ff1493;
+
+}
+
+.surprise-card button{
+
+padding:15px 40px;
+border:none;
+background:#ff2d75;
+color:white;
+border-radius:35px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.surprise-card button:hover{
+
+background:#ff0066;
+transform:translateY(-5px);
+
+}

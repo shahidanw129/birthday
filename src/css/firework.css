@@ -1,0 +1,275 @@
+/* ===========================
+   PREMIUM FIREWORK CSS
+=========================== */
+
+.fireworks-wrapper{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:9999;
+
+background:transparent;
+
+animation:fadeOut 1s ease 9s forwards;
+
+}
+
+.fireworks-canvas{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+pointer-events:auto;
+
+}
+
+.firework-message{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:420px;
+
+max-width:90%;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+box-shadow:
+
+0 20px 60px rgba(255,0,120,.35),
+
+0 0 30px rgba(255,255,255,.15);
+
+animation:
+
+popup .8s ease,
+
+pulse 2s infinite;
+
+pointer-events:none;
+
+}
+
+.firework-message h1{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+color:#ff5fa2;
+
+text-shadow:
+
+0 0 10px #ff5fa2,
+
+0 0 25px deeppink,
+
+0 0 45px hotpink;
+
+}
+
+.firework-message p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#ffffff;
+
+opacity:.95;
+
+}
+
+.firework-message::before{
+
+content:"";
+
+position:absolute;
+
+top:-40px;
+
+left:-40px;
+
+width:120px;
+
+height:120px;
+
+background:rgba(255,0,120,.25);
+
+filter:blur(50px);
+
+border-radius:50%;
+
+z-index:-1;
+
+}
+
+.firework-message::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-40px;
+
+right:-40px;
+
+width:120px;
+
+height:120px;
+
+background:rgba(0,255,255,.20);
+
+filter:blur(50px);
+
+border-radius:50%;
+
+z-index:-1;
+
+}
+
+@keyframes popup{
+
+0%{
+
+opacity:0;
+
+transform:translate(-50%,-60%) scale(.7);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.05);
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+
+@keyframes fadeOut{
+
+0%{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.firework-message{
+
+width:90%;
+
+padding:25px;
+
+}
+
+.firework-message h1{
+
+font-size:30px;
+
+}
+
+.firework-message p{
+
+font-size:15px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.firework-message{
+
+padding:20px;
+
+}
+
+.firework-message h1{
+
+font-size:24px;
+
+}
+
+.firework-message p{
+
+font-size:14px;
+
+}
+
+}
