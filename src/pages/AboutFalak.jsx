@@ -70,7 +70,7 @@ export default function AboutFalak() {
                     <div className="image-glow"></div>
 
                     <img
-                        src="src/pages/6311860629874087195_121.jpg"
+                        src="/images/6311860629874087195_121.jpg"
                         alt="Falak"
                     />
 
@@ -148,7 +148,7 @@ export default function AboutFalak() {
 
                 <div className="section-heading">
                     <div className="story-photo">
-    <img src="src/pages/6311860629874087245_120.jpg" alt="" />
+    <img src="/images/6311860629874087245_120.jpg" alt="" />
 </div>
 
                     <span>
@@ -281,7 +281,7 @@ export default function AboutFalak() {
 
             <section className="qualities-section">
                 <div className="quality-photo">
-    <img src="src/pages/6311860629874087246_120.jpg" alt="" />
+    <img src="/images/6311860629874087246_120.jpg" alt="" />
 </div>
 
                 <div className="section-heading">
@@ -353,7 +353,7 @@ export default function AboutFalak() {
             <section className="relationship-section">
 
 <div className="relationship-photo">
-    <img src="src/pages/6311860629874087247_121.jpg" alt="" />
+    <img src="/images/6311860629874087247_121.jpg" alt="" />
 </div>
                 <div className="relationship-left">
 
@@ -438,7 +438,7 @@ export default function AboutFalak() {
                 id="promise"
             >
                 <div className="shayari-photo">
-    <img src="src/pages/6311860629874087187_121.jpg" alt="" />
+    <img src="/images/6311860629874087187_121.jpg" alt="" />
 </div>
 
                 <div className="shayari-card">
@@ -489,7 +489,7 @@ export default function AboutFalak() {
 
                 <div className="promise-header">
                     <div className="promise-photo">
-    <img src="src/pages/6311860629874087188_121.jpg" alt="" />
+    <img src="/images/6311860629874087188_121.jpg" alt="" />
 </div>
 
                     <span>
@@ -590,7 +590,7 @@ export default function AboutFalak() {
 
                 <div className="ending-heart">
 <div className="ending-photo">
-    <img src="src/pages/6311860629874087189_121.jpg" alt="" />
+    <img src="/images/6311860629874087189_121.jpg" alt="" />
 </div>
                     ❤️
 

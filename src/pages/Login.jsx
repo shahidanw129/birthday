@@ -218,16 +218,12 @@ export default function Login(){
                 <div className="profile-box">
 
 
-                    <img
-
-                        src="src/pages/6311860629874087162_121.jpg"
-
-                        className="profile"
-
-                        alt="Falak"
-
-                    />
-
+      
+<img
+    src="/images/6311860629874087162_121.jpg"
+    className="profile"
+    alt="Falak"
+/>
 
                     <div className="profile-glow"></div>
 

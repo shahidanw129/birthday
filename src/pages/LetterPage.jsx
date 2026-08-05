@@ -58,10 +58,9 @@ export default function LetterPage() {
                     <div className="letter-image">
 
     <img
-        src="src/pages/6311860629874087186_121.jpg"
-        alt="Falak"
-    />
-
+ src="/images/6311860629874087186_121.jpg"
+ alt="Falak"
+/>
 </div>
 
 

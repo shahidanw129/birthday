@@ -44,7 +44,7 @@ export default function Sidebar() {
 
                 <img
 
-                    src="src/components/6311860629874087157_121.jpg"
+                    src="/images/6311860629874087157_121.jpg"
 
                     alt="Falak"
 

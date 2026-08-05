@@ -127,7 +127,7 @@ export default function BirthdayWishes() {
                     </div>
                     <div className="birthday-photo">
     <img
-        src="src/pages/6311860629874087184_120.jpg"
+        src="/images/6311860629874087184_120.jpg"
         alt="Falak"
     />
 </div>
@@ -155,7 +155,7 @@ export default function BirthdayWishes() {
                         </h2>
 <div className="wish-photo">
     <img
-        src="src/pages/6311860629874087185_121.jpg"
+        src="/images/6311860629874087185_121.jpg"
         alt="Falak"
     />
 </div>
@@ -202,7 +202,7 @@ export default function BirthdayWishes() {
                         </h2>
 <div className="message-photo">
     <img
-        src="src/pages/6311860629874087193_121.jpg"
+        src="/images/6311860629874087193_121.jpg"
         alt="Falak"
     />
 </div>
@@ -482,8 +482,8 @@ export default function BirthdayWishes() {
 
                     </h2>
                     <div className="final-photo">
-    <img
-        src="src/pages/6311860629874087194_121.jpg"
+                    <img
+        src="/images/6311860629874087194_121.jpg"
         alt="Falak"
     />
 </div>

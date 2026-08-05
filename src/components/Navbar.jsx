@@ -98,7 +98,7 @@ export default function Navbar() {
 
                     <img
 
-                        src="src/components/6311860629874087161_121.jpg"
+                        src="/images/6311860629874087161_121.jpg"
 
                         alt="Falak"
 

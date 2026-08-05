@@ -246,11 +246,10 @@ export default function Surprise() {
                         </h2>
                         <div className="birthday-photo">
 
-    <img
-        src="src/pages/6311860629874087183_120.jpg"
-        alt="Falak"
-    />
-
+<img
+ src="/images/6311860629874087183_120.jpg"
+ alt="Falak"
+/>
 </div>
 
 
@@ -274,15 +273,11 @@ export default function Surprise() {
 
                             <div className="cake-light light-three"></div>
 
-                            <img
-
-                                src="src/pages/6311860629874087192_121.jpg"
-
-                                alt="Birthday Cake"
-
-                                className="birthday-cake"
-
-                            />
+           <img
+src="/images/6311860629874087192_121.jpg"
+alt="Birthday Cake"
+className="birthday-cake"
+/>
 
                         </div>
 
