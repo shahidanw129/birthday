@@ -1,114 +1,227 @@
-import {useEffect,useState} from "react";
+import { useEffect, useState } from "react";
 
 import {
-FaBell,
-FaHeart,
-FaMoon
+    FaBell,
+    FaSearch,
+    FaHeart,
+    FaMoon,
+    FaBars
 } from "react-icons/fa";
-
 
 import "../css/navbar.css";
 
 
-export default function Navbar(){
+export default function Navbar({setOpen}) {
 
 
-const [time,setTime]=useState("");
-
-
-
-useEffect(()=>{
-
-
-const t=setInterval(()=>{
-
-setTime(
-new Date().toLocaleTimeString(
-"en-IN",
-{
-hour:"2-digit",
-minute:"2-digit"
-}
-)
-)
-
-},1000);
-
-
-return()=>clearInterval(t);
-
-
-},[]);
+    const [time,setTime] = useState("");
 
 
 
-return(
-
-<div className="navbar">
+    useEffect(()=>{
 
 
-<h2>
-🎂 Birthday Dashboard
-</h2>
+        const timer = setInterval(()=>{
 
 
-
-<div className="nav-right">
-
-
-<div className="clock">
-
-🕒 {time}
-
-</div>
+            const now = new Date();
 
 
+            setTime(
 
-<div className="icon">
-<FaBell/>
-</div>
+                now.toLocaleTimeString("en-IN",{
+
+                    hour:"2-digit",
+
+                    minute:"2-digit",
+
+                    second:"2-digit"
+
+                })
+
+            );
 
 
-<div className="icon">
-<FaHeart/>
-</div>
-
-
-<div className="icon">
-<FaMoon/>
-</div>
+        },1000);
 
 
 
-<div className="profile">
-
-<img
-src="/images/6311860629874087161_121.jpg"
-/>
-
-
-<div>
-
-<h4>
-Falak
-</h4>
-
-<small>
-Birthday Girl ❤️
-</small>
-
-</div>
-
-
-</div>
+        return ()=>clearInterval(timer);
 
 
 
-</div>
+    },[]);
 
 
-</div>
 
-)
+
+
+    return(
+
+
+        <div className="navbar">
+
+
+
+            {/* MOBILE MENU BUTTON */}
+
+            <div
+
+                className="mobile-menu"
+
+                onClick={()=>setOpen(true)}
+
+            >
+
+                <FaBars/>
+
+            </div>
+
+
+
+
+
+            <div className="nav-left">
+
+
+                <h2>
+
+                    🎂 Birthday Dashboard
+
+                </h2>
+
+
+            </div>
+
+
+
+
+
+
+            <div className="search-box">
+
+
+                <FaSearch/>
+
+
+                <input
+
+                    type="text"
+
+                    placeholder="Search Memories..."
+
+                />
+
+
+            </div>
+
+
+
+
+
+
+            <div className="nav-right">
+
+
+
+                <div className="clock">
+
+                    🕒 {time}
+
+                </div>
+
+
+
+
+
+                <div className="icon">
+
+
+                    <FaBell/>
+
+
+                    <span>
+
+                        3
+
+                    </span>
+
+
+                </div>
+
+
+
+
+
+                <div className="icon">
+
+                    <FaHeart/>
+
+                </div>
+
+
+
+
+
+                <div className="icon">
+
+                    <FaMoon/>
+
+                </div>
+
+
+
+
+
+
+
+                <div className="profile">
+
+
+                    <img
+
+                        src="/images/6311860629874087161_121.jpg"
+
+                        alt="Falak"
+
+                    />
+
+
+
+                    <div>
+
+
+                        <h4>
+
+                            Falak
+
+                        </h4>
+
+
+                        <small>
+
+                            Birthday Girl ❤️
+
+                        </small>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    );
+
 
 }

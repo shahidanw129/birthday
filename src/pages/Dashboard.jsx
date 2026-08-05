@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
@@ -13,27 +15,55 @@ import Footer from "../components/Footer";
 
 import "../css/dashboard.css";
 
+
 export default function Dashboard() {
+
+
+    const [open,setOpen] = useState(false);
+
+
 
     return (
 
         <>
 
+
             <Hearts />
 
             <Fireworks />
 
+
+
             <div className="dashboard">
 
-                <Sidebar />
+
+                <Sidebar
+
+                    open={open}
+
+                    setOpen={setOpen}
+
+                />
+
+
 
                 <div className="main">
 
-                    <Navbar />
+
+                    <Navbar
+
+                        setOpen={setOpen}
+
+                    />
+
+
 
                     <Hero />
 
+
+
                     <div className="cards">
+
 
                         <div className="card">
 
@@ -47,6 +77,8 @@ export default function Dashboard() {
 
                         </div>
 
+
+
                         <div className="card">
 
                             <h2>🎁 Gifts</h2>
@@ -58,6 +90,8 @@ export default function Dashboard() {
                             </p>
 
                         </div>
+
+
 
                         <div className="card">
 
@@ -71,6 +105,8 @@ export default function Dashboard() {
 
                         </div>
 
+
+
                         <div className="card">
 
                             <h2>💌 Wishes</h2>
@@ -83,7 +119,11 @@ export default function Dashboard() {
 
                         </div>
 
+
                     </div>
+
+
+
 
                     <Countdown />
 
@@ -99,12 +139,16 @@ export default function Dashboard() {
 
                     <Footer />
 
+
                 </div>
 
+
             </div>
+
 
         </>
 
     );
+
 
 }

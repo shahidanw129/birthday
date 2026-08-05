@@ -438,3 +438,42 @@ display:none;
 
 
 }
+.mobile-menu{
+
+display:none;
+
+font-size:28px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.mobile-menu{
+
+display:block;
+
+}
+
+
+.nav-left h2{
+
+font-size:18px;
+
+}
+
+
+.navbar{
+
+padding:15px;
+
+}
+
+
+}
