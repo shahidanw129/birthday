@@ -1,131 +1,114 @@
-import { useEffect, useState } from "react";
+import {useEffect,useState} from "react";
+
 import {
-    FaBell,
-    FaSearch,
-    FaHeart,
-    FaMoon
+FaBell,
+FaHeart,
+FaMoon
 } from "react-icons/fa";
+
 
 import "../css/navbar.css";
 
-export default function Navbar() {
 
-    const [time, setTime] = useState("");
+export default function Navbar(){
 
-    useEffect(() => {
 
-        const timer = setInterval(() => {
+const [time,setTime]=useState("");
 
-            const now = new Date();
 
-            setTime(
 
-                now.toLocaleTimeString("en-IN", {
+useEffect(()=>{
 
-                    hour: "2-digit",
 
-                    minute: "2-digit",
+const t=setInterval(()=>{
 
-                    second: "2-digit"
+setTime(
+new Date().toLocaleTimeString(
+"en-IN",
+{
+hour:"2-digit",
+minute:"2-digit"
+}
+)
+)
 
-                })
+},1000);
 
-            );
 
-        }, 1000);
+return()=>clearInterval(t);
 
-        return () => clearInterval(timer);
 
-    }, []);
+},[]);
 
-    return (
 
-        <div className="navbar">
 
-            <div className="nav-left">
+return(
 
-                <h2>
+<div className="navbar">
 
-                    🎂 Birthday Dashboard
 
-                </h2>
+<h2>
+🎂 Birthday Dashboard
+</h2>
 
-            </div>
 
-            <div className="search-box">
 
-                <FaSearch />
+<div className="nav-right">
 
-                <input
 
-                    type="text"
+<div className="clock">
 
-                    placeholder="Search Memories..."
+🕒 {time}
 
-                />
+</div>
 
-            </div>
 
-            <div className="nav-right">
 
-                <div className="clock">
+<div className="icon">
+<FaBell/>
+</div>
 
-                    🕒 {time}
 
-                </div>
+<div className="icon">
+<FaHeart/>
+</div>
 
-                <div className="icon">
 
-                    <FaBell />
+<div className="icon">
+<FaMoon/>
+</div>
 
-                    <span>3</span>
 
-                </div>
 
-                <div className="icon">
+<div className="profile">
 
-                    <FaHeart />
+<img
+src="/images/6311860629874087161_121.jpg"
+/>
 
-                </div>
 
-                <div className="icon">
+<div>
 
-                    <FaMoon />
+<h4>
+Falak
+</h4>
 
-                </div>
+<small>
+Birthday Girl ❤️
+</small>
 
-                <div className="profile">
+</div>
 
-                    <img
 
-                        src="/images/6311860629874087161_121.jpg"
+</div>
 
-                        alt="Falak"
 
-                    />
 
-                    <div>
+</div>
 
-                        <h4>
 
-                            Falak
+</div>
 
-                        </h4>
-
-                        <small>
-
-                            Birthday Girl ❤️
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    );
+)
 
 }
