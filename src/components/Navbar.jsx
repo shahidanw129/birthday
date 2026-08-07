@@ -11,7 +11,7 @@ import {
 import "../css/navbar.css";
 
 
-export default function Navbar({setOpen}) {
+export default function Navbar({setOpen}){
 
 
     const [time,setTime] = useState("");
@@ -63,14 +63,9 @@ export default function Navbar({setOpen}) {
 
 
 
-            {/* MOBILE MENU BUTTON */}
-
             <div
-
                 className="mobile-menu"
-
                 onClick={()=>setOpen(true)}
-
             >
 
                 <FaBars/>
@@ -120,6 +115,7 @@ export default function Navbar({setOpen}) {
 
 
 
+
             <div className="nav-right">
 
 
@@ -136,16 +132,11 @@ export default function Navbar({setOpen}) {
 
                 <div className="icon">
 
-
                     <FaBell/>
 
-
                     <span>
-
                         3
-
                     </span>
-
 
                 </div>
 
@@ -168,7 +159,6 @@ export default function Navbar({setOpen}) {
                     <FaMoon/>
 
                 </div>
-
 
 
 
@@ -217,11 +207,9 @@ export default function Navbar({setOpen}) {
 
 
 
-
         </div>
 
 
     );
-
 
 }

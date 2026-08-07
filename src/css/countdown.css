@@ -1,88 +1,77 @@
+/* ==========================================
+   PREMIUM COUNTDOWN
+========================================== */
+
 .countdown-section{
 
-padding:60px 20px;
-
-text-align:center;
+    padding:60px 20px;
+    text-align:center;
 
 }
 
 
+/* HEADING */
 
 .countdown-heading h1{
 
-font-size:42px;
-
-color:#ff2d75;
-
-text-shadow:
-0 0 20px
-rgba(255,45,117,.4);
+    font-size:42px;
+    color:#ff2d75;
+    text-shadow:0 0 20px rgba(255,45,117,.4);
+    line-height:1.3;
 
 }
-
 
 
 .countdown-heading p{
 
-font-size:18px;
-
-color:#777;
-
-margin-top:15px;
+    font-size:18px;
+    color:#777;
+    margin:15px auto 0;
+    max-width:650px;
+    line-height:1.8;
 
 }
 
 
+
+/* GRID */
 
 .countdown-grid{
 
-margin-top:50px;
-
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:25px;
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 
 }
 
 
+
+/* CARD */
 
 .time-card{
 
-background:
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
 
-linear-gradient(
-145deg,
-#ffffff,
-#ffe3ef
-);
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #ffe3ef
+    );
 
-padding:35px 20px;
+    padding:35px 20px;
 
-border-radius:30px;
+    border-radius:30px;
 
-box-shadow:
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
 
-0 20px 40px
-rgba(0,0,0,.12);
+    transition:.4s;
 
-transition:.4s;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-
-
-.time-card:hover{
-
-transform:
-translateY(-10px)
-scale(1.05);
+    animation:cardUp .7s ease both;
 
 }
 
@@ -90,23 +79,34 @@ scale(1.05);
 
 .time-card::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-width:150px;
+    width:150px;
+    height:150px;
 
-height:150px;
+    background:#ff2d75;
 
-background:#ff2d75;
+    border-radius:50%;
 
-border-radius:50%;
+    top:-80px;
+    right:-70px;
 
-top:-80px;
+    opacity:.15;
 
-right:-70px;
+}
 
-opacity:.15;
+
+
+.time-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+    box-shadow:
+    0 25px 45px rgba(255,45,117,.25);
 
 }
 
@@ -114,11 +114,25 @@ opacity:.15;
 
 .number{
 
-font-size:55px;
+    font-size:55px;
 
-font-weight:800;
+    font-weight:800;
 
-color:#ff2d75;
+    color:#ff2d75;
+
+    font-variant-numeric:tabular-nums;
+
+    transition:.3s;
+
+}
+
+
+
+.time-card:hover .number{
+
+    transform:scale(1.08);
+
+    color:#ff0066;
 
 }
 
@@ -126,84 +140,44 @@ color:#ff2d75;
 
 .label{
 
-font-size:18px;
+    font-size:18px;
 
-margin-top:10px;
+    margin-top:10px;
 
-color:#444;
+    color:#444;
 
-font-weight:bold;
+    font-weight:bold;
 
 }
 
 
+
+/* BIRTHDAY COMPLETE */
 
 .birthday-done{
 
-margin:50px auto;
+    margin:50px auto;
 
-padding:50px;
+    padding:50px;
 
-max-width:700px;
+    max-width:700px;
 
-font-size:35px;
+    font-size:35px;
 
-font-weight:bold;
+    font-weight:bold;
 
-color:white;
+    color:white;
 
-background:
+    background:
+    linear-gradient(
+        135deg,
+        #ff2d75,
+        #ff85c0
+    );
 
-linear-gradient(
-135deg,
-#ff2d75,
-#ff85c0
-);
+    border-radius:35px;
 
-border-radius:35px;
-
-animation:
-
-birthdayGlow 2s infinite;
-
-}
-
-
-
-.birthday-message{
-
-margin-top:50px;
-
-background:white;
-
-padding:35px;
-
-border-radius:25px;
-
-box-shadow:
-
-0 15px 35px
-rgba(0,0,0,.1);
-
-}
-
-
-
-.birthday-message h2{
-
-color:#ff2d75;
-
-}
-
-
-
-.birthday-message p{
-
-color:#555;
-
-font-size:17px;
-
-line-height:1.8;
+    animation:birthdayGlow 2s infinite;
 
 }
 
@@ -211,75 +185,182 @@ line-height:1.8;
 
 @keyframes birthdayGlow{
 
+    0%{
 
-0%{
+        box-shadow:0 0 10px pink;
 
-box-shadow:
-0 0 10px pink;
-
-}
+    }
 
 
-50%{
+    50%{
 
-box-shadow:
-0 0 40px #ff2d75;
+        box-shadow:0 0 40px #ff2d75;
 
-}
+    }
 
 
-100%{
+    100%{
 
-box-shadow:
-0 0 10px pink;
+        box-shadow:0 0 10px pink;
 
-}
-
+    }
 
 }
 
 
 
+/* CARD ANIMATION */
+
+@keyframes cardUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+TABLET
+========================================== */
 
 @media(max-width:900px){
 
 
 .countdown-grid{
 
-grid-template-columns:
-repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
+
+}
+
 
 }
 
 
 
+/* ==========================================
+MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+
+.countdown-section{
+
+    padding:40px 15px;
+
 }
-
-
-
-@media(max-width:500px){
-
-
-.countdown-grid{
-
-grid-template-columns:
-1fr;
-
-}
-
 
 
 .countdown-heading h1{
 
-font-size:30px;
+    font-size:28px;
+
+}
+
+
+.countdown-heading p{
+
+    font-size:15px;
+
+}
+
+
+.countdown-grid{
+
+    gap:15px;
+
+}
+
+
+.time-card{
+
+    padding:25px 15px;
+
+    border-radius:20px;
+
+}
+
+
+.number{
+
+    font-size:42px;
+
+}
+
+
+.label{
+
+    font-size:16px;
+
+}
+
 
 }
 
 
 
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+
+.countdown-section{
+
+    padding:35px 12px;
+
+}
+
+
+.countdown-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.time-card{
+
+    padding:22px;
+
+}
+
+
 .number{
 
-font-size:45px;
+    font-size:38px;
+
+}
+
+
+.label{
+
+    font-size:15px;
+
+}
+
+
+.birthday-done{
+
+    padding:30px 20px;
+
+    font-size:24px;
+
+    border-radius:20px;
 
 }
 

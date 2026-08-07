@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/hero.css";
 
 export default function Hero() {
+
+    const navigate = useNavigate();
 
     const birthday = new Date("2026-08-15T00:00:00");
 
@@ -14,52 +17,63 @@ export default function Hero() {
         if (diff <= 0) {
 
             return {
-
-                days: "00",
-
-                hours: "00",
-
-                minutes: "00",
-
-                seconds: "00"
-
+                days:"00",
+                hours:"00",
+                minutes:"00",
+                seconds:"00"
             };
 
         }
 
         return {
 
-            days: String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, "0"),
+            days:String(
+                Math.floor(diff / (1000 * 60 * 60 * 24))
+            ).padStart(2,"0"),
 
-            hours: String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0"),
+            hours:String(
+                Math.floor((diff / (1000 * 60 * 60)) % 24)
+            ).padStart(2,"0"),
 
-            minutes: String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0"),
+            minutes:String(
+                Math.floor((diff / (1000 * 60)) % 60)
+            ).padStart(2,"0"),
 
-            seconds: String(Math.floor((diff / 1000) % 60)).padStart(2, "0")
+            seconds:String(
+                Math.floor((diff / 1000) % 60)
+            ).padStart(2,"0")
 
         };
 
     };
 
-    const [time, setTime] = useState(calculate());
 
-    useEffect(() => {
+    const [time,setTime] = useState(calculate());
 
-        const timer = setInterval(() => {
+
+    useEffect(()=>{
+
+        const timer=setInterval(()=>{
 
             setTime(calculate());
 
-        }, 1000);
+        },1000);
 
-        return () => clearInterval(timer);
 
-    }, []);
+        return()=>clearInterval(timer);
+
+
+    },[]);
+
+
 
     return (
 
         <section className="hero">
 
+
             <div className="hero-left">
+
 
                 <span className="hero-badge">
 
@@ -67,21 +81,25 @@ export default function Hero() {
 
                 </span>
 
+
+
                 <h1>
 
                     Happy Birthday
 
-                    <br />
+                    <br/>
 
                     <span>Falak ❤️</span>
 
                 </h1>
 
+
+
                 <p>
 
                     Dear Falak,
 
-                    <br /><br />
+                    <br/><br/>
 
                     Today is one of the most beautiful days because it celebrates you.
 
@@ -95,23 +113,45 @@ export default function Hero() {
 
                 </p>
 
+
+
                 <div className="hero-buttons">
 
-                    <button className="primary-btn">
+
+                    <button
+
+                    className="primary-btn"
+
+                    onClick={()=>navigate("/surprise")}
+
+                    >
 
                         🎁 Open Surprise
 
                     </button>
 
-                    <button className="secondary-btn">
+
+
+                    <button
+
+                    className="secondary-btn"
+
+                    onClick={()=>navigate("/gallery")}
+
+                    >
 
                         📸 Gallery
 
                     </button>
 
+
                 </div>
 
+
+
+
                 <div className="counter">
+
 
                     <div className="box">
 
@@ -121,6 +161,7 @@ export default function Hero() {
 
                     </div>
 
+
                     <div className="box">
 
                         <h2>{time.hours}</h2>
@@ -128,6 +169,7 @@ export default function Hero() {
                         <p>Hours</p>
 
                     </div>
+
 
                     <div className="box">
 
@@ -137,6 +179,7 @@ export default function Hero() {
 
                     </div>
 
+
                     <div className="box">
 
                         <h2>{time.seconds}</h2>
@@ -145,25 +188,33 @@ export default function Hero() {
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
+
+
+
             <div className="hero-right">
+
 
                 <div className="photo-circle">
 
                     <img
 
-                        src="/images/6311860629874087153_121.jpg"
+                    src="/images/6311860629874087153_121.jpg"
 
-                        alt="Falak"
+                    alt="Falak"
 
-                        className="hero-photo"
+                    className="hero-photo"
 
                     />
 
                 </div>
+
+
 
                 <div className="love-card">
 
@@ -171,13 +222,19 @@ export default function Hero() {
 
                 </div>
 
+
+
                 <div className="wish-card">
 
                     🎂 Wishing You Endless Happiness
 
                 </div>
 
+
+
             </div>
+
+
 
         </section>
 

@@ -1,188 +1,71 @@
-.gallery-section{
-
-margin-top:40px;
-
-}
-
-.title{
-
-text-align:center;
-margin-bottom:40px;
-
-}
-
-.title h1{
-
-font-size:40px;
-color:#ff2d75;
-
-}
-
-.title p{
-
-margin-top:10px;
-color:#666;
-font-size:17px;
-
-}
-
-.gallery-grid{
-
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-
-}
-
-.gallery-card{
-
-position:relative;
-overflow:hidden;
-border-radius:25px;
-height:350px;
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-}
-
-.gallery-card img{
-
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.6s;
-
-}
-
-.gallery-card:hover img{
-
-transform:scale(1.15);
-
-}
-
-.overlay{
-
-position:absolute;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.85));
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-padding:30px;
-color:white;
-opacity:0;
-transition:.5s;
-
-}
-
-.gallery-card:hover .overlay{
-
-opacity:1;
-
-}
-
-.overlay h2{
-
-font-size:30px;
-margin-bottom:10px;
-
-}
-
-.overlay p{
-
-font-size:15px;
-line-height:1.8;
-margin-bottom:20px;
-
-}
-
-.overlay button{
-
-width:180px;
-padding:14px;
-border:none;
-background:#ff2d75;
-color:white;
-border-radius:35px;
-cursor:pointer;
-font-size:16px;
-transition:.3s;
-
-}
-
-.overlay button:hover{
-
-background:white;
-color:#ff2d75;
-
-}
-
-@media(max-width:900px){
-
-.gallery-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/* =====================================
-        PREMIUM GALLERY
-===================================== */
+/* ==========================================
+   GALLERY SECTION
+========================================== */
 
 .gallery-section{
 
-    margin-top:60px;
-
-    padding:20px;
+    margin:50px 0;
 
 }
+
+
 
 .title{
 
     text-align:center;
 
-    margin-bottom:50px;
+    color:white;
+
+    margin-bottom:35px;
 
 }
+
 
 .title h1{
 
-    font-size:42px;
+    font-size:38px;
 
-    color:#ffffff;
+    color:#ff78b8;
 
     margin-bottom:15px;
 
-    text-shadow:0 0 20px hotpink;
-
 }
+
 
 .title p{
 
-    max-width:800px;
+    color:#ddd;
 
-    margin:auto;
+    font-size:17px;
 
-    color:#dddddd;
-
-    font-size:18px;
-
-    line-height:1.8;
+    line-height:1.7;
 
 }
+
+
+
+/* ==========================================
+   GRID
+========================================== */
+
 
 .gallery-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
 
-    gap:30px;
+    gap:25px;
 
 }
+
+
+
+/* ==========================================
+   CARD
+========================================== */
+
 
 .gallery-card{
 
@@ -190,51 +73,62 @@ grid-template-columns:1fr;
 
     overflow:hidden;
 
-    border-radius:25px;
+    border-radius:22px;
 
-    background:#fff;
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
 
     box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
 
-    0 15px 40px rgba(0,0,0,.25);
-
-    transition:.5s;
+    transition:.35s;
 
     cursor:pointer;
 
 }
 
+
+
 .gallery-card:hover{
 
-    transform:translateY(-12px);
+    transform:
+    translateY(-8px);
 
     box-shadow:
-
-    0 20px 50px rgba(255,45,117,.45);
+    0 20px 40px rgba(255,45,117,.35);
 
 }
+
+
 
 .gallery-card img{
 
     width:100%;
 
-    height:420px;
+    height:320px;
 
     object-fit:cover;
 
-    object-position:center;
-
     display:block;
 
-    transition:.6s;
+    transition:.4s;
 
 }
+
+
 
 .gallery-card:hover img{
 
-    transform:scale(1.12);
+    transform:scale(1.08);
 
 }
+
+
+
+/* Overlay */
+
 
 .overlay{
 
@@ -242,27 +136,27 @@ grid-template-columns:1fr;
 
     left:0;
 
-    right:0;
-
     bottom:0;
 
-    padding:30px;
+    width:100%;
 
-    background:linear-gradient(
+    padding:20px;
 
+    background:
+    linear-gradient(
         transparent,
-
-        rgba(0,0,0,.92)
-
+        rgba(0,0,0,.85)
     );
 
     color:white;
 
     transform:translateY(100%);
 
-    transition:.5s;
+    transition:.4s;
 
 }
+
+
 
 .gallery-card:hover .overlay{
 
@@ -270,178 +164,325 @@ grid-template-columns:1fr;
 
 }
 
-.overlay h2{
 
-    font-size:28px;
-
-    margin-bottom:12px;
-
-    color:#ff9ecf;
-
-}
-
-.overlay p{
-
-    font-size:16px;
-
-    line-height:1.7;
-
-    margin-bottom:18px;
-
-}
-
-.overlay button{
-
-    padding:14px 28px;
-
-    border:none;
-
-    border-radius:40px;
-
-    cursor:pointer;
-
-    background:linear-gradient(
-
-        135deg,
-
-        #ff2d75,
-
-        #ff69b4
-
-    );
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    transition:.35s;
-
-}
-
-.overlay button:hover{
-
-    transform:scale(1.08);
-
-    background:white;
-
-    color:#ff2d75;
-
-}
-
-.gallery-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-
-        45deg,
-
-        rgba(255,45,117,.15),
-
-        transparent,
-
-        rgba(255,255,255,.12)
-
-    );
-
-    opacity:0;
-
-    transition:.5s;
-
-    z-index:1;
-
-}
-
-.gallery-card:hover::before{
-
-    opacity:1;
-
-}
-
-.overlay{
-
-    z-index:2;
-
-}
-
-/* ===========================
-        MOBILE
-=========================== */
-
-@media(max-width:992px){
-
-.gallery-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:768px){
-
-.gallery-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.title h1{
-
-    font-size:32px;
-
-}
-
-.title p{
-
-    font-size:16px;
-
-}
-
-.gallery-card img{
-
-    height:340px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.gallery-card img{
-
-    height:300px;
-
-}
-
-.overlay{
-
-    padding:20px;
-
-}
 
 .overlay h2{
 
-    font-size:22px;
+    font-size:20px;
+
+    margin-bottom:8px;
 
 }
+
+
 
 .overlay p{
 
     font-size:14px;
 
+    color:#ddd;
+
 }
+
+
 
 .overlay button{
 
-    width:100%;
+    margin-top:10px;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#ff2d75;
+
+    color:white;
+
+    cursor:pointer;
 
 }
+
+
+
+/* ==========================================
+   LIGHTBOX
+========================================== */
+
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.95);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    padding:20px;
+
+}
+
+
+
+.lightbox img{
+
+    width:auto;
+
+    max-width:90%;
+
+    max-height:70vh;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 35px #ff2d75;
+
+}
+
+
+
+.lightbox h2{
+
+    color:white;
+
+    margin-top:20px;
+
+    font-size:28px;
+
+}
+
+
+
+.lightbox p{
+
+    color:#ddd;
+
+    text-align:center;
+
+    max-width:600px;
+
+}
+
+
+
+/* Buttons */
+
+
+.close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+    color:white;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+}
+
+
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff2d75;
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+.prev{
+
+    left:25px;
+
+}
+
+
+.next{
+
+    right:25px;
+
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+
+@media(max-width:992px){
+
+
+    .gallery-card img{
+
+        height:280px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media(max-width:768px){
+
+
+    .gallery-section{
+
+        margin:35px 0;
+
+    }
+
+
+    .title h1{
+
+        font-size:28px;
+
+    }
+
+
+    .title p{
+
+        font-size:15px;
+
+    }
+
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+
+    .gallery-card img{
+
+        height:380px;
+
+    }
+
+
+    .lightbox img{
+
+        width:100%;
+
+        max-height:60vh;
+
+        border-radius:15px;
+
+    }
+
+
+    .prev,
+    .next{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:20px;
+
+    }
+
+
+    .prev{
+
+        left:10px;
+
+    }
+
+
+    .next{
+
+        right:10px;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+
+@media(max-width:480px){
+
+
+    .gallery-card img{
+
+        height:300px;
+
+    }
+
+
+    .lightbox h2{
+
+        font-size:20px;
+
+    }
+
+
+    .lightbox p{
+
+        font-size:14px;
+
+    }
+
+
+    .close{
+
+        font-size:28px;
+
+        right:15px;
+
+    }
 
 }

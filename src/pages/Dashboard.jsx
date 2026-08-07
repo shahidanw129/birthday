@@ -9,6 +9,7 @@ import MemoryTimeline from "../components/MemoryTimeline";
 import Quotes from "../components/Quotes";
 import Letter from "../components/Letter";
 import GiftBox from "../components/GiftBox";
+import Surprise from "../pages/Surprise";
 import Fireworks from "../components/Fireworks";
 import Hearts from "../components/Hearts";
 import Footer from "../components/Footer";
@@ -16,44 +17,35 @@ import Footer from "../components/Footer";
 import "../css/dashboard.css";
 
 
-export default function Dashboard() {
-
+export default function Dashboard(){
 
     const [open,setOpen] = useState(false);
 
 
-
-    return (
+    return(
 
         <>
-
 
             <Hearts />
 
             <Fireworks />
 
 
-
             <div className="dashboard">
 
 
                 <Sidebar
-
                     open={open}
-
                     setOpen={setOpen}
-
                 />
 
 
 
-                <div className="main">
+                <main className="main">
 
 
                     <Navbar
-
                         setOpen={setOpen}
-
                     />
 
 
@@ -62,7 +54,7 @@ export default function Dashboard() {
 
 
 
-                    <div className="cards">
+                    <section className="cards">
 
 
                         <div className="card">
@@ -76,6 +68,7 @@ export default function Dashboard() {
                             </p>
 
                         </div>
+
 
 
 
@@ -93,6 +86,8 @@ export default function Dashboard() {
 
 
 
+
+
                         <div className="card">
 
                             <h2>📸 Memories</h2>
@@ -104,6 +99,8 @@ export default function Dashboard() {
                             </p>
 
                         </div>
+
+
 
 
 
@@ -120,7 +117,8 @@ export default function Dashboard() {
                         </div>
 
 
-                    </div>
+                    </section>
+
 
 
 
@@ -131,16 +129,18 @@ export default function Dashboard() {
 
                     <MemoryTimeline />
 
-                    <Quotes />
-
                     <Letter />
 
+                    <Quotes />
+
                     <GiftBox />
+
+                    <Surprise />
 
                     <Footer />
 
 
-                </div>
+                </main>
 
 
             </div>
@@ -149,6 +149,5 @@ export default function Dashboard() {
         </>
 
     );
-
 
 }

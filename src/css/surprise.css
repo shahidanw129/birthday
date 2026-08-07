@@ -2491,3 +2491,108 @@
     }
 
 }
+/* =====================================
+        SURPRISE MOBILE FIX
+===================================== */
+
+@media (max-width:992px){
+
+.surprise-container,
+.gift-container,
+.gift-box{
+
+    padding:25px;
+
+}
+
+.surprise-title,
+.gift-title{
+
+    font-size:34px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.surprise-container,
+.gift-container,
+.gift-box{
+
+    padding:20px 15px;
+
+}
+
+.surprise-title,
+.gift-title{
+
+    font-size:28px;
+
+    text-align:center;
+
+}
+
+.surprise-text,
+.gift-text{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+.gift-image img,
+.surprise-image img{
+
+    width:100%;
+
+    max-width:280px;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+
+}
+
+.surprise-btn,
+.gift-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:16px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.surprise-title,
+.gift-title{
+
+    font-size:24px;
+
+}
+
+.surprise-text,
+.gift-text{
+
+    font-size:15px;
+
+}
+
+.gift-image img,
+.surprise-image img{
+
+    max-width:230px;
+
+}
+
+}

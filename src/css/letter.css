@@ -1738,3 +1738,57 @@
     }
 
 }
+/* =========================
+   MOBILE FIX
+========================= */
+
+@media (max-width:768px){
+
+    .letter-page{
+        padding:70px 15px;
+    }
+
+    .letter-page-header{
+        margin-bottom:35px;
+    }
+
+    .letter-page-header h1{
+        font-size:34px;
+    }
+
+    .letter-page-header p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .letter-card,
+    .letter-content,
+    .letter-box{
+        padding:20px !important;
+        border-radius:18px;
+    }
+
+    .letter-content p{
+        font-size:16px;
+        line-height:2;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .letter-page-header h1{
+        font-size:28px;
+    }
+
+    .letter-content p{
+        font-size:15px;
+    }
+
+    .letter-image img{
+        width:100%;
+        max-width:260px;
+        height:auto;
+    }
+
+}

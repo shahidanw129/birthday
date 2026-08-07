@@ -22,9 +22,7 @@ export default function GiftBox() {
 
             <div className="gift-container">
 
-                {
-
-                    !open ?
+                {!open ? (
 
                     <div
                         className="gift-box"
@@ -35,62 +33,48 @@ export default function GiftBox() {
 
                         <div className="gift-body">
 
-                            <FaGift className="gift-icon"/>
+                            <FaGift className="gift-icon" />
 
-                            <h2>
+                            <h2>Click To Open</h2>
 
-                                Click To Open
-
-                            </h2>
+                            <small>Tap Here 🎁</small>
 
                         </div>
 
                     </div>
 
-                    :
+                ) : (
 
                     <div className="surprise-card">
 
-                        <FaBirthdayCake className="cake"/>
+                        <FaBirthdayCake className="cake" />
 
-                        <h1>
-
-                            🎂 Happy Birthday Falak ❤️
-
-                        </h1>
+                        <h1>🎂 Happy Birthday Falak ❤️</h1>
 
                         <p>
-
                             May Allah bless you with happiness,
-                            success,
-                            good health,
-                            endless smiles
+                            success, good health, endless smiles
                             and beautiful memories.
-
                         </p>
 
-                        <h2>
-
-                            You are Amazing ❤️
-
-                        </h2>
+                        <h2>You are Amazing ❤️</h2>
 
                         <button>
 
                             <FaHeart />
 
-                            Forever Together
+                            <span>Forever Together</span>
 
                         </button>
 
                     </div>
 
-                }
+                )}
 
             </div>
 
         </section>
 
-    )
+    );
 
 }

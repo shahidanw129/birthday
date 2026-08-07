@@ -1,282 +1,416 @@
+/* =====================================
+   DASHBOARD MAIN LAYOUT
+===================================== */
 
 .dashboard{
-
-display:flex;
-
-min-height:100vh;
-
-background:linear-gradient(135deg,#0b1220,#141e30,#1b2735);
-
-overflow-x:hidden;
-
+    display:flex;
+    min-height:100vh;
+    background:
+    linear-gradient(
+        135deg,
+        #0b1220,
+        #141e30,
+        #1b2735
+    );
+    overflow-x:hidden;
 }
+
+
+
+/* =====================================
+   MAIN AREA
+===================================== */
 
 .main{
-
-flex:1;
-
-margin-left:270px;
-
-padding:30px;
-
-min-height:100vh;
-
-animation:fadeIn .8s ease;
-
+    flex:1;
+    margin-left:280px;
+    padding:30px;
+    min-height:100vh;
+    animation:fadeIn .8s ease;
 }
+
+
+
+/* =====================================
+   CARDS
+===================================== */
 
 .cards{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:
+    repeat(2,1fr);
 
-gap:25px;
+    gap:25px;
 
-margin:40px 0;
+    margin:35px 0;
 
 }
+
+
 
 .card{
 
-position:relative;
+    position:relative;
 
-overflow:hidden;
+    overflow:hidden;
 
-padding:30px;
+    padding:28px;
 
-border-radius:22px;
+    border-radius:22px;
 
-background:rgba(255,255,255,.08);
+    background:
+    rgba(255,255,255,.08);
 
-backdrop-filter:blur(18px);
+    backdrop-filter:blur(20px);
 
--webkit-backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(20px);
 
-border:1px solid rgba(255,255,255,.1);
+    border:
+    1px solid rgba(255,255,255,.12);
 
-transition:.4s;
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.25);
 
-cursor:pointer;
+    transition:.35s;
 
-box-shadow:0 15px 35px rgba(0,0,0,.25);
+    cursor:pointer;
 
 }
+
+
 
 .card::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-top:-70px;
+    width:160px;
 
-right:-70px;
+    height:160px;
 
-width:160px;
+    top:-70px;
 
-height:160px;
+    right:-70px;
 
-border-radius:50%;
+    border-radius:50%;
 
-background:rgba(255,95,162,.15);
+    background:
+    rgba(255,255,255,.10);
 
-transition:.5s;
-
-}
-
-.card:hover::before{
-
-transform:scale(1.5);
+    transition:.5s;
 
 }
+
+
 
 .card:hover{
 
-transform:translateY(-10px);
+    transform:
+    translateY(-10px);
 
-box-shadow:0 20px 45px rgba(255,95,162,.35);
+    box-shadow:
+    0 20px 40px rgba(255,45,117,.35);
 
 }
+
+
+
+.card:hover::before{
+
+    transform:
+    scale(1.5);
+
+}
+
+
+
+/* TEXT */
 
 .card h2{
 
-font-size:22px;
+    color:#ff78b8;
 
-color:#ff7db8;
+    font-size:22px;
 
-margin-bottom:15px;
+    margin-bottom:12px;
 
 }
+
+
 
 .card h1{
 
-font-size:42px;
+    color:white;
 
-font-weight:700;
+    font-size:42px;
 
-margin-bottom:10px;
-
-color:#fff;
+    margin:0 0 10px;
 
 }
+
+
 
 .card p{
 
-font-size:15px;
+    color:#d8d8d8;
 
-line-height:1.8;
+    font-size:15px;
 
-color:#d8d8d8;
+    line-height:1.8;
 
 }
+
+
+
+/* CARD COLORS */
 
 .card:nth-child(1){
 
-border-left:5px solid #ff2d75;
+    border-left:
+    5px solid #ff2d75;
 
 }
+
+
 
 .card:nth-child(2){
 
-border-left:5px solid #ff9800;
+    border-left:
+    5px solid #ff9800;
 
 }
+
+
 
 .card:nth-child(3){
 
-border-left:5px solid #00d4ff;
+    border-left:
+    5px solid #00d4ff;
 
 }
+
+
 
 .card:nth-child(4){
 
-border-left:5px solid #8b5cf6;
+    border-left:
+    5px solid #8b5cf6;
 
 }
+
+
+
+/* =====================================
+   ANIMATION
+===================================== */
+
 
 @keyframes fadeIn{
 
-from{
+    from{
 
-opacity:0;
+        opacity:0;
 
-transform:translateY(30px);
+        transform:
+        translateY(25px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
 
 }
 
-to{
 
-opacity:1;
 
-transform:translateY(0);
+/* =====================================
+   SCROLLBAR
+===================================== */
 
-}
-
-}
 
 ::-webkit-scrollbar{
 
-width:10px;
+    width:10px;
 
 }
 
-::-webkit-scrollbar-thumb{
-
-background:#ff5fa2;
-
-border-radius:20px;
-
-}
 
 ::-webkit-scrollbar-track{
 
-background:#1b2735;
+    background:#111827;
 
 }
 
-@media(max-width:1200px){
 
-.cards{
+::-webkit-scrollbar-thumb{
 
-grid-template-columns:repeat(2,1fr);
+    background:#ff2d75;
+
+    border-radius:20px;
 
 }
 
-}
+
+/* =====================================
+   TABLET
+===================================== */
+
 
 @media(max-width:992px){
 
-.main{
 
-margin-left:0;
+    .main{
 
-padding:20px;
+        margin-left:0;
 
-}
+        padding:20px;
 
-.cards{
+    }
 
-grid-template-columns:repeat(2,1fr);
 
 }
 
-}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
 
 @media(max-width:768px){
 
-.cards{
 
-grid-template-columns:1fr;
+    .dashboard{
+
+        display:block;
+
+    }
+
+
+
+    .main{
+
+        width:100%;
+
+        margin-left:0;
+
+        padding:15px;
+
+    }
+
+
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+        margin:25px 0;
+
+    }
+
+
+
+    .card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    .card h1{
+
+        font-size:34px;
+
+    }
+
+
+
+    .card h2{
+
+        font-size:20px;
+
+    }
+
+
+
+    .card p{
+
+        font-size:14px;
+
+    }
+
 
 }
 
-.card{
 
-padding:22px;
 
-}
+/* =====================================
+   SMALL MOBILE
+===================================== */
 
-.card h1{
-
-font-size:34px;
-
-}
-
-.card h2{
-
-font-size:20px;
-
-}
-
-}
 
 @media(max-width:480px){
 
-.main{
 
-padding:15px;
+    .main{
 
-}
+        padding:12px;
 
-.card{
+    }
 
-padding:18px;
 
-border-radius:18px;
 
-}
+    .cards{
 
-.card h1{
+        gap:15px;
 
-font-size:28px;
+    }
 
-}
 
-.card p{
 
-font-size:14px;
+    .card{
 
-}
+        padding:18px;
+
+    }
+
+
+
+    .card h1{
+
+        font-size:28px;
+
+    }
+
+
+
+    .card h2{
+
+        font-size:18px;
+
+    }
+
+
+
+    .card p{
+
+        font-size:13px;
+
+    }
 
 }

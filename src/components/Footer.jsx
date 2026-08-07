@@ -1,32 +1,54 @@
 import "../css/footer.css";
+import { FaHeart, FaBirthdayCake, FaStar } from "react-icons/fa";
 
-export default function Footer(){
+export default function Footer() {
+    return (
+        <footer className="footer">
 
-return(
+            <div className="footer-top">
 
-<footer className="footer">
+                <FaBirthdayCake className="footer-cake" />
 
-<h2>
+                <h2>
+                    🎂 Happy Birthday Falak ❤️
+                </h2>
 
-❤️ Happy Birthday Falak ❤️
+                <p className="footer-subtitle">
+                    Made with endless love, prayers and beautiful memories.
+                </p>
 
-</h2>
+            </div>
 
-<p>
+            <div className="footer-divider">
+                <span></span>
+                ❤️
+                <span></span>
+            </div>
 
-Made With ❤️ By Shahid
+            <div className="footer-content">
 
-</p>
+                <p>
+                    <FaHeart className="footer-icon" />
+                    Made With ❤️ By <strong>Shahid</strong>
+                </p>
 
-<p>
+                <p>
+                    May Allah always bless you with happiness,
+                    good health, success and countless smiles.
+                </p>
 
-May Allah Always Keep You Happy,
-Healthy and Successful.
+                <div className="footer-stars">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </div>
 
-</p>
+            </div>
 
-</footer>
+            <div className="footer-bottom">
+                ❤️ Forever • 2026 • Happy Birthday ❤️
+            </div>
 
-)
-
+        </footer>
+    );
 }
