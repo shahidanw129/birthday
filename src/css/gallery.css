@@ -1,71 +1,36 @@
 /* ==========================================
-   GALLERY SECTION
+                GALLERY
 ========================================== */
 
-.gallery-section{
+.gallery{
 
     margin:50px 0;
 
 }
 
-
-
-.title{
+.gallery-title{
 
     text-align:center;
 
     color:white;
 
-    margin-bottom:35px;
-
-}
-
-
-.title h1{
-
     font-size:38px;
 
-    color:#ff78b8;
+    margin-bottom:35px;
 
-    margin-bottom:15px;
-
-}
-
-
-.title p{
-
-    color:#ddd;
-
-    font-size:17px;
-
-    line-height:1.7;
+    font-weight:700;
 
 }
-
-
-
-/* ==========================================
-   GRID
-========================================== */
-
 
 .gallery-grid{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
     gap:25px;
 
 }
-
-
-
-/* ==========================================
-   CARD
-========================================== */
-
 
 .gallery-card{
 
@@ -75,33 +40,23 @@
 
     border-radius:22px;
 
-    background:
-    rgba(255,255,255,.08);
+    background:rgba(255,255,255,.08);
 
     backdrop-filter:blur(15px);
 
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.25);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
 
     transition:.35s;
 
-    cursor:pointer;
-
 }
-
-
 
 .gallery-card:hover{
 
-    transform:
-    translateY(-8px);
+    transform:translateY(-8px);
 
-    box-shadow:
-    0 20px 40px rgba(255,45,117,.35);
+    box-shadow:0 20px 40px rgba(255,45,117,.35);
 
 }
-
-
 
 .gallery-card img{
 
@@ -117,372 +72,118 @@
 
 }
 
-
-
 .gallery-card:hover img{
 
     transform:scale(1.08);
 
 }
 
-
-
-/* Overlay */
-
-
-.overlay{
-
-    position:absolute;
-
-    left:0;
-
-    bottom:0;
-
-    width:100%;
-
-    padding:20px;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.85)
-    );
+.gallery-card h3{
 
     color:white;
 
-    transform:translateY(100%);
-
-    transition:.4s;
-
-}
-
-
-
-.gallery-card:hover .overlay{
-
-    transform:translateY(0);
-
-}
-
-
-
-.overlay h2{
-
-    font-size:20px;
-
-    margin-bottom:8px;
-
-}
-
-
-
-.overlay p{
-
-    font-size:14px;
-
-    color:#ddd;
-
-}
-
-
-
-.overlay button{
-
-    margin-top:10px;
-
-    padding:10px 18px;
-
-    border:none;
-
-    border-radius:25px;
-
-    background:#ff2d75;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-
-
-/* ==========================================
-   LIGHTBOX
-========================================== */
-
-
-.lightbox{
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-    rgba(0,0,0,.95);
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:99999;
-
-    padding:20px;
-
-}
-
-
-
-.lightbox img{
-
-    width:auto;
-
-    max-width:90%;
-
-    max-height:70vh;
-
-    object-fit:contain;
-
-    border-radius:20px;
-
-    box-shadow:
-    0 0 35px #ff2d75;
-
-}
-
-
-
-.lightbox h2{
-
-    color:white;
-
-    margin-top:20px;
-
-    font-size:28px;
-
-}
-
-
-
-.lightbox p{
-
-    color:#ddd;
+    padding:18px;
 
     text-align:center;
 
-    max-width:600px;
+    font-size:20px;
+
+    font-weight:600;
 
 }
 
-
-
-/* Buttons */
-
-
-.close{
-
-    position:absolute;
-
-    top:20px;
-
-    right:30px;
-
-    color:white;
-
-    font-size:35px;
-
-    cursor:pointer;
-
-}
-
-
-
-.prev,
-.next{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#ff2d75;
-
-    color:white;
-
-    font-size:25px;
-
-    cursor:pointer;
-
-}
-
-
-
-.prev{
-
-    left:25px;
-
-}
-
-
-.next{
-
-    right:25px;
-
-}
-
-
-
-/* ==========================================
-   TABLET
-========================================== */
-
+/* ===========================
+        TABLET
+=========================== */
 
 @media(max-width:992px){
 
+.gallery-grid{
 
-    .gallery-card img{
-
-        height:280px;
-
-    }
+grid-template-columns:repeat(2,1fr);
 
 }
 
+.gallery-card img{
 
+height:280px;
 
-/* ==========================================
-   MOBILE
-========================================== */
+}
 
+}
+
+/* ===========================
+        MOBILE
+=========================== */
 
 @media(max-width:768px){
 
+.gallery{
 
-    .gallery-section{
-
-        margin:35px 0;
-
-    }
-
-
-    .title h1{
-
-        font-size:28px;
-
-    }
-
-
-    .title p{
-
-        font-size:15px;
-
-    }
-
-
-    .gallery-grid{
-
-        grid-template-columns:1fr;
-
-        gap:18px;
-
-    }
-
-
-    .gallery-card img{
-
-        height:380px;
-
-    }
-
-
-    .lightbox img{
-
-        width:100%;
-
-        max-height:60vh;
-
-        border-radius:15px;
-
-    }
-
-
-    .prev,
-    .next{
-
-        width:45px;
-
-        height:45px;
-
-        font-size:20px;
-
-    }
-
-
-    .prev{
-
-        left:10px;
-
-    }
-
-
-    .next{
-
-        right:10px;
-
-    }
-
+margin:35px 0;
 
 }
 
+.gallery-title{
 
+font-size:28px;
 
-/* ==========================================
-   SMALL MOBILE
-========================================== */
+margin-bottom:25px;
 
+}
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.gallery-card{
+
+border-radius:18px;
+
+}
+
+.gallery-card img{
+
+height:350px;
+
+}
+
+.gallery-card h3{
+
+font-size:18px;
+
+}
+
+}
+
+/* ===========================
+      SMALL MOBILE
+=========================== */
 
 @media(max-width:480px){
 
+.gallery-title{
 
-    .gallery-card img{
+font-size:24px;
 
-        height:300px;
+}
 
-    }
+.gallery-card img{
 
+height:280px;
 
-    .lightbox h2{
+}
 
-        font-size:20px;
+.gallery-card h3{
 
-    }
+font-size:16px;
 
+padding:14px;
 
-    .lightbox p{
-
-        font-size:14px;
-
-    }
-
-
-    .close{
-
-        font-size:28px;
-
-        right:15px;
-
-    }
+}
 
 }

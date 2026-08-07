@@ -1,422 +1,190 @@
-/* =====================================
+/* ===================================
    NAVBAR
-===================================== */
+=================================== */
 
 .navbar{
-
     width:100%;
-
     min-height:80px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
-    gap:20px;
-
     padding:15px 25px;
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(18px);
-
-    -webkit-backdrop-filter:blur(18px);
-
     border-radius:18px;
-
     margin-bottom:25px;
-
     color:white;
-
-    border:1px solid rgba(255,255,255,.12);
-
 }
-
-
 
 /* LEFT */
 
 .nav-left{
-
     display:flex;
-
     align-items:center;
-
+    gap:15px;
 }
-
 
 .nav-left h2{
-
     margin:0;
-
     font-size:24px;
-
     font-weight:700;
-
-    white-space:nowrap;
-
 }
-
-
 
 /* MOBILE MENU */
 
 .mobile-menu{
-
     display:none;
-
     font-size:28px;
-
-    color:white;
-
     cursor:pointer;
-
+    color:white;
 }
-
-
 
 /* SEARCH */
 
 .search-box{
-
     width:350px;
-
     height:46px;
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
     padding:0 18px;
-
     background:rgba(255,255,255,.12);
-
     border-radius:30px;
-
 }
-
-
-
-.search-box svg{
-
-    color:#ff78b8;
-
-}
-
 
 .search-box input{
-
     width:100%;
-
     border:none;
-
     outline:none;
-
-    background:transparent;
-
+    background:none;
     color:white;
-
-    font-size:15px;
-
 }
-
-
 
 .search-box input::placeholder{
-
     color:#ddd;
-
 }
-
-
 
 /* RIGHT */
 
 .nav-right{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
 }
-
-
-
-/* CLOCK */
 
 .clock{
-
     background:#ff2d75;
-
     padding:10px 16px;
-
     border-radius:30px;
-
     font-size:14px;
-
 }
-
-
-
-/* ICON */
 
 .icon{
-
     width:44px;
-
     height:44px;
-
     border-radius:50%;
-
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
+    align-items:center;
     background:rgba(255,255,255,.12);
-
     cursor:pointer;
-
-    position:relative;
-
     transition:.3s;
-
 }
-
-
 
 .icon:hover{
-
     background:#ff2d75;
-
-    transform:translateY(-3px);
-
 }
-
-
-
-.icon span{
-
-    position:absolute;
-
-    top:-5px;
-
-    right:-3px;
-
-    width:18px;
-
-    height:18px;
-
-    background:white;
-
-    color:#ff2d75;
-
-    border-radius:50%;
-
-    font-size:11px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-weight:bold;
-
-}
-
-
-
-/* PROFILE */
 
 .profile{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
 }
-
-
 
 .profile img{
-
     width:52px;
-
     height:52px;
-
     border-radius:50%;
-
     object-fit:cover;
-
     border:3px solid hotpink;
-
-    box-shadow:0 0 15px pink;
-
 }
-
-
 
 .profile h4{
-
     margin:0;
-
     font-size:15px;
-
 }
-
-
 
 .profile small{
-
     color:#ffd6ea;
-
 }
 
-
-
-/* =====================================
+/* ===========================
    TABLET
-===================================== */
+=========================== */
 
-@media(max-width:1100px){
+@media(max-width:992px){
 
-
-    .search-box{
-
-        display:none;
-
-    }
-
+.search-box{
+    display:none;
+}
 
 }
 
-
-
-
-
-/* =====================================
+/* ===========================
    MOBILE
-===================================== */
+=========================== */
 
 @media(max-width:768px){
 
+.navbar{
+    padding:15px;
+    flex-wrap:wrap;
+}
 
-    .navbar{
+.mobile-menu{
+    display:block;
+}
 
-        padding:15px;
+.nav-left{
+    flex:1;
+}
 
-        flex-wrap:wrap;
+.nav-left h2{
+    font-size:19px;
+}
 
-    }
+.clock{
+    display:none;
+}
 
+.profile h4,
+.profile small{
+    display:none;
+}
 
+.nav-right{
+    width:100%;
+    justify-content:center;
+    margin-top:12px;
+    gap:10px;
+}
 
-    .mobile-menu{
+.icon{
+    width:40px;
+    height:40px;
+}
 
-        display:block;
-
-    }
-
-
-
-    .nav-left h2{
-
-        font-size:18px;
-
-    }
-
-
-
-    .nav-right{
-
-        width:100%;
-
-        justify-content:center;
-
-        gap:10px;
-
-    }
-
-
-
-    .clock{
-
-        display:none;
-
-    }
-
-
-
-    .profile h4,
-    .profile small{
-
-        display:none;
-
-    }
-
-
-
-    .icon{
-
-        width:40px;
-
-        height:40px;
-
-    }
-
-
-
-    .profile img{
-
-        width:45px;
-
-        height:45px;
-
-    }
-
+.profile img{
+    width:45px;
+    height:45px;
+}
 
 }
 
-
-
-
-
-/* SMALL MOBILE */
-
 @media(max-width:480px){
 
-
-    .nav-left h2{
-
-        font-size:15px;
-
-    }
-
-
-
-    .mobile-menu{
-
-        font-size:24px;
-
-    }
-
-
-
-    .navbar{
-
-        border-radius:15px;
-
-    }
-
+.nav-left h2{
+    font-size:17px;
+}
 
 }
